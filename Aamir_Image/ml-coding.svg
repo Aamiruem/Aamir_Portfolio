@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="800" viewBox="0 0 640 800" role="img" aria-label="Workspace illustration: training a machine-learning model in Python">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1230"/><stop offset="1" stop-color="#1A1146"/></linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".38" r=".55"><stop offset="0" stop-color="#3B82F6" stop-opacity=".45"/><stop offset="1" stop-color="#3B82F6" stop-opacity="0"/></radialGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2A1E"/><stop offset="1" stop-color="#22180F"/></linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#070B1D" stop-opacity="0"/><stop offset=".45" stop-color="#070B1D" stop-opacity=".9"/></linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/>
+  <rect width="640" height="800" fill="url(#glow)"/>
+  <!-- wall poster -->
+  <rect x="44" y="70" width="120" height="150" rx="8" fill="#101A3E" stroke="#2B3A75"/>
+  <text x="104" y="104" fill="#7DD3FC" font-family="Segoe UI,Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle">ML</text>
+  <circle cx="104" cy="160" r="30" fill="none" stroke="#60A5FA" stroke-opacity=".7"/>
+  <circle cx="104" cy="160" r="4" fill="#93C5FD"/>
+  <g stroke="#60A5FA" stroke-opacity=".6"><line x1="104" y1="160" x2="82" y2="140"/><line x1="104" y1="160" x2="128" y2="146"/><line x1="104" y1="160" x2="98" y2="188"/></g>
+  <!-- main monitor -->
+  <rect x="96" y="150" width="448" height="290" rx="16" fill="#05081A" stroke="#3B4C8F" stroke-width="3"/>
+  <rect x="110" y="164" width="420" height="262" rx="8" fill="#0D1330"/>
+  <rect x="110" y="164" width="420" height="26" rx="8" fill="#151D45"/>
+  <circle cx="126" cy="177" r="5" fill="#F87171"/><circle cx="142" cy="177" r="5" fill="#FBBF24"/><circle cx="158" cy="177" r="5" fill="#4ADE80"/>
+  <text x="320" y="182" fill="#9FB0E8" font-family="Consolas,monospace" font-size="12" text-anchor="middle">train_model.py</text>
+  <g font-family="Consolas,monospace" font-size="13.5">
+    <text x="124" y="214"><tspan fill="#C084FC">from</tspan><tspan fill="#E2E8F0"> sklearn.ensemble </tspan><tspan fill="#C084FC">import</tspan><tspan fill="#E2E8F0"> RandomForestRegressor</tspan></text>
+    <text x="124" y="236"><tspan fill="#C084FC">from</tspan><tspan fill="#E2E8F0"> sklearn.metrics </tspan><tspan fill="#C084FC">import</tspan><tspan fill="#E2E8F0"> mean_absolute_error</tspan></text>
+    <text x="124" y="262" fill="#64748B"># prepare features → train → evaluate</text>
+    <text x="124" y="286"><tspan fill="#E2E8F0">model = </tspan><tspan fill="#7DD3FC">RandomForestRegressor</tspan><tspan fill="#E2E8F0">(n_estimators=</tspan><tspan fill="#FBBF24">300</tspan><tspan fill="#E2E8F0">)</tspan></text>
+    <text x="124" y="308"><tspan fill="#E2E8F0">model.</tspan><tspan fill="#7DD3FC">fit</tspan><tspan fill="#E2E8F0">(X_train, y_train)</tspan></text>
+    <text x="124" y="330"><tspan fill="#E2E8F0">pred = model.</tspan><tspan fill="#7DD3FC">predict</tspan><tspan fill="#E2E8F0">(X_test)</tspan></text>
+    <text x="124" y="352"><tspan fill="#E2E8F0">mae = </tspan><tspan fill="#7DD3FC">mean_absolute_error</tspan><tspan fill="#E2E8F0">(y_test, pred)</tspan></text>
+  </g>
+  <rect x="124" y="370" width="392" height="44" rx="6" fill="#060A1C" stroke="#1F2A5C"/>
+  <text x="136" y="390" fill="#4ADE80" font-family="Consolas,monospace" font-size="12.5">$ python train_model.py</text>
+  <text x="136" y="406" fill="#86EFAC" font-family="Consolas,monospace" font-size="12.5">✓ features ready  ✓ model trained  ✓ evaluation saved</text>
+  <rect x="300" y="440" width="40" height="44" fill="#1C2550"/>
+  <rect x="250" y="482" width="140" height="10" rx="5" fill="#1C2550"/>
+  <!-- desk -->
+  <rect x="0" y="492" width="640" height="308" fill="url(#desk)"/>
+  <rect x="150" y="520" width="300" height="34" rx="8" fill="#141A35" stroke="#2A3566"/>
+  <g fill="#232C57"><rect x="162" y="528" width="276" height="7" rx="3"/><rect x="162" y="540" width="276" height="7" rx="3"/></g>
+  <rect x="478" y="524" width="44" height="28" rx="14" fill="#141A35" stroke="#2A3566"/>
+  <!-- mug + plant -->
+  <rect x="64" y="508" width="44" height="52" rx="8" fill="#1E3A8A"/><path d="M108 520 q18 6 0 26" fill="none" stroke="#1E3A8A" stroke-width="6"/>
+  <rect x="556" y="500" width="40" height="40" rx="6" fill="#3B2A20"/>
+  <g fill="#22C55E"><ellipse cx="566" cy="490" rx="10" ry="20" transform="rotate(-20 566 490)"/><ellipse cx="584" cy="486" rx="10" ry="22" transform="rotate(18 584 486)"/><ellipse cx="576" cy="480" rx="8" ry="22"/></g>
+  <!-- caption -->
+  <rect x="0" y="560" width="640" height="240" fill="url(#cap)"/>
+  <text x="320" y="690" fill="#FFFFFF" font-family="Georgia,serif" font-size="34" text-anchor="middle">Building ML pipelines</text>
+  <text x="320" y="724" fill="#93C5FD" font-family="Segoe UI,Arial,sans-serif" font-size="16" letter-spacing="2" text-anchor="middle">PYTHON · SCIKIT-LEARN · TENSORFLOW</text>
+</svg>

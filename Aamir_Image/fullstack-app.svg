@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="800" viewBox="0 0 640 800" role="img" aria-label="Workspace illustration: full-stack web app on a laptop and phone">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1B0F3A"/><stop offset="1" stop-color="#2A0F2E"/></linearGradient>
+    <radialGradient id="glow" cx=".45" cy=".38" r=".6"><stop offset="0" stop-color="#A855F7" stop-opacity=".42"/><stop offset="1" stop-color="#A855F7" stop-opacity="0"/></radialGradient>
+    <linearGradient id="btn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A0618" stop-opacity="0"/><stop offset=".45" stop-color="#0A0618" stop-opacity=".9"/></linearGradient>
+  </defs>
+  <rect width="640" height="800" fill="url(#bg)"/>
+  <rect width="640" height="800" fill="url(#glow)"/>
+  <!-- laptop -->
+  <rect x="40" y="150" width="440" height="290" rx="16" fill="#0A0820" stroke="#4C3A8F" stroke-width="3"/>
+  <rect x="54" y="164" width="412" height="262" rx="8" fill="#F8FAFC"/>
+  <rect x="54" y="164" width="412" height="30" rx="8" fill="#E2E8F0"/>
+  <circle cx="70" cy="179" r="5" fill="#F87171"/><circle cx="86" cy="179" r="5" fill="#FBBF24"/><circle cx="102" cy="179" r="5" fill="#4ADE80"/>
+  <rect x="124" y="170" width="250" height="18" rx="9" fill="#FFFFFF"/>
+  <text x="136" y="183" fill="#64748B" font-family="Segoe UI,Arial,sans-serif" font-size="11">stayfinder.app/listings</text>
+  <text x="74" y="224" fill="#0F172A" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">Find your next stay</text>
+  <rect x="74" y="236" width="260" height="28" rx="8" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="86" y="255" fill="#94A3B8" font-family="Segoe UI,Arial,sans-serif" font-size="12">Where to? · Any week · Guests</text>
+  <rect x="342" y="236" width="104" height="28" rx="8" fill="url(#btn)"/>
+  <text x="394" y="255" fill="#FFFFFF" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" text-anchor="middle">Search</text>
+  <g>
+    <rect x="74" y="280" width="118" height="128" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="82" y="288" width="102" height="64" rx="6" fill="#C7D2FE"/><path d="M90 344 l22-26 18 18 12-12 34 20 z" fill="#6366F1"/>
+    <rect x="200" y="280" width="118" height="128" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="208" y="288" width="102" height="64" rx="6" fill="#FBCFE8"/><path d="M216 344 l22-26 18 18 12-12 34 20 z" fill="#EC4899"/>
+    <rect x="326" y="280" width="118" height="128" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/><rect x="334" y="288" width="102" height="64" rx="6" fill="#A7F3D0"/><path d="M342 344 l22-26 18 18 12-12 34 20 z" fill="#10B981"/>
+    <g fill="#CBD5E1"><rect x="82" y="364" width="80" height="8" rx="4"/><rect x="208" y="364" width="80" height="8" rx="4"/><rect x="334" y="364" width="80" height="8" rx="4"/></g>
+    <g fill="#E2E8F0"><rect x="82" y="380" width="54" height="8" rx="4"/><rect x="208" y="380" width="54" height="8" rx="4"/><rect x="334" y="380" width="54" height="8" rx="4"/></g>
+  </g>
+  <path d="M10 440 h500 l24 22 h-548 z" fill="#2A2160"/>
+  <!-- phone -->
+  <rect x="470" y="250" width="140" height="270" rx="22" fill="#0A0820" stroke="#6D4FD1" stroke-width="3"/>
+  <rect x="480" y="264" width="120" height="242" rx="14" fill="#0F172A"/>
+  <text x="492" y="290" fill="#E9D5FF" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700">API response</text>
+  <g font-family="Consolas,monospace" font-size="10.5">
+    <text x="492" y="314" fill="#94A3B8">GET /api/listings</text>
+    <text x="492" y="334" fill="#4ADE80">200 OK</text>
+    <text x="492" y="356" fill="#E2E8F0">{</text>
+    <text x="500" y="374"><tspan fill="#7DD3FC">"city"</tspan><tspan fill="#E2E8F0">: </tspan><tspan fill="#FBBF24">"Jaipur"</tspan></text>
+    <text x="500" y="392"><tspan fill="#7DD3FC">"results"</tspan><tspan fill="#E2E8F0">: [</tspan><tspan fill="#C084FC">…</tspan><tspan fill="#E2E8F0">]</tspan></text>
+    <text x="492" y="410" fill="#E2E8F0">}</text>
+  </g>
+  <rect x="492" y="430" width="96" height="26" rx="8" fill="url(#btn)"/>
+  <text x="540" y="447" fill="#FFFFFF" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" text-anchor="middle">Book now</text>
+  <!-- tech badges -->
+  <g font-family="Segoe UI,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+    <rect x="70" y="500" width="110" height="34" rx="17" fill="#0B1B33" stroke="#38BDF8"/><text x="125" y="522" fill="#7DD3FC">React</text>
+    <rect x="194" y="500" width="110" height="34" rx="17" fill="#0B2516" stroke="#4ADE80"/><text x="249" y="522" fill="#86EFAC">Node.js</text>
+    <rect x="318" y="500" width="120" height="34" rx="17" fill="#1F1A0B" stroke="#FBBF24"/><text x="378" y="522" fill="#FDE68A">MongoDB</text>
+  </g>
+  <!-- caption -->
+  <rect x="0" y="560" width="640" height="240" fill="url(#cap)"/>
+  <text x="320" y="690" fill="#FFFFFF" font-family="Georgia,serif" font-size="34" text-anchor="middle">Shipping full-stack apps</text>
+  <text x="320" y="724" fill="#D8B4FE" font-family="Segoe UI,Arial,sans-serif" font-size="16" letter-spacing="2" text-anchor="middle">REACT · NODE.JS · EXPRESS · MONGODB</text>
+</svg>
