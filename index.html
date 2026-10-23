@@ -8,7 +8,7 @@
 <meta name="keywords" content="Aamir Hussain Azad, Aamir Azad, Aamir Hussain, Aamir Hussain Azad portfolio, AI ML engineer, full-stack developer, machine learning portfolio, data analyst, Python, SQL, React, Node.js, RAG chatbot, crop yield prediction, UEM Jaipur, India">
 <meta name="author" content="Aamir Hussain Azad">
 <!-- Extra photos for the hero rotation and About photo strip: comma-separated paths, e.g. assets/photos/aamir-1.webp,assets/photos/aamir-2.webp -->
-<meta name="extra-photos" content="assets/photos/aamir-work-2.webp,assets/photos/aamir-work-1.webp,assets/photos/aamir-office.webp,assets/photos/aamir-work-3.webp,assets/photos/aamir-work-4.webp,assets/photos/aamir-work-5.webp">
+<meta name="extra-photos" content="assets/photos/aamir-work-2-hq.webp,assets/photos/aamir-work-1-hq.webp,assets/photos/aamir-office-hq.webp,assets/photos/aamir-work-3-hq.webp,assets/photos/aamir-work-4-hq.webp,assets/photos/aamir-work-5-hq.webp">
 <!-- Google Search Console: paste your verification tag on the next line -->
 <!-- <meta name="google-site-verification" content="PASTE_CODE_HERE"> -->
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
@@ -2609,8 +2609,6 @@ document.documentElement.setAttribute('data-theme',t);})();
   .about-now-links{display:flex; flex-wrap:wrap; gap:8px;}
   .about-now-links a{padding:7px 13px; border-radius:999px; font:600 13px var(--font-label); text-decoration:none; color:var(--text); border:1px solid rgba(var(--c-violet),.45); background:rgba(var(--c-violet),.10);}
   .about-now-links a:hover{background:rgba(var(--c-violet),.24); border-color:rgb(var(--c-violet));}
-  .photo-strip{grid-column:1/-1; display:grid; grid-template-columns:repeat(auto-fill,minmax(110px,1fr)); gap:10px;}
-  .photo-strip[hidden]{display:none;}
   .photo-frame{margin:0; padding:3px; border-radius:14px; aspect-ratio:4/5; overflow:hidden; background:linear-gradient(135deg,#3B82F6,#8B5CF6);}
   .photo-frame:nth-child(5n+2){background:linear-gradient(135deg,#EC4899,#F59E0B);} .photo-frame:nth-child(5n+3){background:linear-gradient(135deg,#14B8A6,#22C55E);}
   .photo-frame:nth-child(5n+4){background:linear-gradient(135deg,#F97316,#EF4444);} .photo-frame:nth-child(5n){background:linear-gradient(135deg,#06B6D4,#6366F1);}
@@ -2656,6 +2654,24 @@ document.documentElement.setAttribute('data-theme',t);})();
   .hero-profile-card.ps-emerald{background:linear-gradient(135deg,#14B8A6,#22C55E 50%,#84CC16) !important;}
   .hero-profile-card.ps-violet{background:linear-gradient(135deg,#8B5CF6,#A855F7 50%,#EC4899) !important;}
   .hero-profile-card.ps-mono{background:linear-gradient(135deg,#E2E8F0,#64748B 50%,#1E293B) !important;}
+  .hero-profile-card img{object-fit:cover !important; object-position:50% 30%;}
+  .at-work{margin-top:8px; margin-bottom:28px;}
+  .at-work-head{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:16px;}
+  .at-work-head h2{margin:10px 0 0; font-size:clamp(22px,2.2vw,32px); font-weight:800; letter-spacing:-.02em;}
+  .at-work-nav{display:flex; gap:8px;}
+  .aw-btn{width:42px; height:42px; border-radius:50%; border:1px solid rgba(var(--c-violet),.45); background:var(--panel); color:var(--text); font-size:18px; cursor:pointer; transition:transform .2s ease, background .2s ease;}
+  .aw-btn:hover{transform:translateY(-2px); background:rgba(var(--c-violet),.18);}
+  .at-work-track{display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; padding:4px 2px 14px; scrollbar-width:thin;}
+  .aw-item{flex:0 0 auto; margin:0; height:clamp(230px,26vw,380px); padding:3px; border-radius:18px; scroll-snap-align:start; cursor:zoom-in;
+    background:linear-gradient(135deg,#3B82F6,#8B5CF6 50%,#EC4899); box-shadow:0 14px 34px rgba(15,23,42,.22); transition:transform .25s ease;}
+  .aw-item:nth-child(3n+2){background:linear-gradient(135deg,#14B8A6,#22C55E);} .aw-item:nth-child(3n){background:linear-gradient(135deg,#F59E0B,#EC4899);}
+  .aw-item:hover,.aw-item:focus-visible{transform:translateY(-4px);}
+  .aw-item img{height:100%; width:auto; display:block; border-radius:15px;}
+  .photo-lightbox{padding:0; border:0; background:transparent; max-width:94vw; max-height:92vh; overflow:visible;}
+  .photo-lightbox::backdrop{background:rgba(3,6,20,.85); backdrop-filter:blur(4px);}
+  .photo-lightbox img{display:block; max-width:94vw; max-height:92vh; width:auto; height:auto; border-radius:14px; box-shadow:0 30px 80px rgba(0,0,0,.6);}
+  .pl-close{position:absolute; top:-14px; right:-14px; width:40px; height:40px; border-radius:50%; border:0; background:#fff; color:#0F172A; font-size:18px; cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,.4);}
+  @media (max-width:560px){ .aw-item{height:210px;} .at-work-head h2{font-size:20px;} .pl-close{top:8px; right:8px;} }
   .photo-dots{display:flex; justify-content:center; gap:7px; margin-top:12px;}
   .photo-dots button{width:9px; height:9px; padding:0; border-radius:999px; border:0; cursor:pointer; background:rgba(var(--c-violet),.3); transition:width .3s ease, background .3s ease;}
   .photo-dots button.on{width:26px; background:linear-gradient(90deg,#3B82F6,#EC4899);}
@@ -2754,7 +2770,7 @@ document.documentElement.setAttribute('data-theme',t);})();
     <div class="hero-profile-side" aria-label="Professional portrait of Aamir Hussain Azad">
       <figure class="hero-profile-card">
         <img
-          src="assets/aamir-hussain-azad.webp" width="640" height="800" fetchpriority="high"
+          src="assets/aamir-hussain-azad-hq.webp" width="640" height="800" fetchpriority="high"
           alt="Aamir Hussain Azad, AI/ML Engineer and Software Engineer"
           loading="eager"
           decoding="async">
@@ -2825,6 +2841,14 @@ document.documentElement.setAttribute('data-theme',t);})();
         </div>
     </div>
   </div>
+  <div class="wrap at-work" id="at-work" hidden>
+    <div class="at-work-head">
+      <div><div class="eyebrow">At work</div><h2>At my desk and with the team</h2></div>
+      <div class="at-work-nav"><button type="button" class="aw-btn" data-dir="-1" aria-label="Previous photo">&#8592;</button><button type="button" class="aw-btn" data-dir="1" aria-label="Next photo">&#8594;</button></div>
+    </div>
+    <div class="at-work-track" id="at-work-track"></div>
+  </div>
+  <dialog class="photo-lightbox" id="photo-lightbox" aria-label="Photo viewer"><img alt=""><button type="button" class="pl-close" aria-label="Close">&#10005;</button></dialog>
   <div class="wrap" style="padding-bottom:40px;">
     <div class="panel model-showcase reveal">
       <div class="model-showcase-head">
@@ -3034,7 +3058,6 @@ document.documentElement.setAttribute('data-theme',t);})();
             <a href="codehub/index.html" target="_blank" rel="noopener">CodeHub &#8599;</a>
           </div>
         </div>
-        <div class="photo-strip" id="photo-strip" hidden aria-label="Photos of Aamir Hussain Azad"></div>
       </div>
     </div>
 
@@ -5467,13 +5490,13 @@ document.documentElement.setAttribute('data-theme',t);})();
   (function(){
     var card=document.querySelector('.hero-profile-card'), dots=document.getElementById('photo-dots'); if(!card||!dots) return;
     var img=card.querySelector('img'), bg=document.createElement('span'); bg.className='photo-bg'; card.insertBefore(bg,img);
-    var alt=img.getAttribute('alt'), slides=[img.getAttribute('src')].concat(extraPhotos());
+    var alt=img.getAttribute('alt'), slides=[img.getAttribute('src')];
     var frames=['ps-studio','ps-ocean','ps-gold','ps-emerald','ps-violet','ps-mono'], cur=0, timer=null, pending=null;
     var still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-    slides.slice(1).forEach(function(src){ var pre=new Image(); pre.src=src; });
-    if(slides.length<2){ dots.hidden=true; }
-    slides.forEach(function(src,i){ var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Show photo '+(i+1));
-      b.onclick=function(){ show(i); restart(); }; dots.appendChild(b); });
+    function addDot(i){ var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Show photo '+(i+1)); b.onclick=function(){ show(i); restart(); }; dots.appendChild(b); }
+    addDot(0); dots.hidden=true;
+    // upright photos fill the portrait frame; wide ones are shown whole in the "At work" gallery
+    extraPhotos().forEach(function(src){ var pre=new Image(); pre.onload=function(){ if(pre.naturalWidth/pre.naturalHeight<=1.1){ slides.push(src); addDot(slides.length-1); dots.hidden=slides.length<2; restart(); } }; pre.src=src; });
     function show(k){
       cur=(k+slides.length)%slides.length; var src=slides[cur];
       var apply=function(){ frames.forEach(function(c){ card.classList.remove(c); }); card.classList.add(frames[cur%frames.length]); bg.style.backgroundImage='url("'+src+'")'; };
@@ -5489,14 +5512,27 @@ document.documentElement.setAttribute('data-theme',t);})();
     show(0); restart();
   })();
 
-  // photo strip: shows the photos listed in <meta name="extra-photos">
+  // "At work" gallery: every photo shown whole at its natural shape, click to enlarge
   (function(){
-    var strip=document.getElementById('photo-strip'); if(!strip) return;
-    extraPhotos().forEach(function(src,i){
-      var img=new Image(); img.alt='Aamir Hussain Azad, AI/ML Engineer — photo '+(i+1); img.loading='lazy'; img.decoding='async';
-      img.onload=function(){ var f=document.createElement('figure'); f.className='photo-frame'; f.style.order=i; f.appendChild(img); strip.appendChild(f); strip.hidden=false; };
-      img.src=src;
+    var box=document.getElementById('at-work'), track=document.getElementById('at-work-track'), lb=document.getElementById('photo-lightbox'); if(!box||!track) return;
+    var list=[document.querySelector('.hero-profile-card img').getAttribute('src')].concat(extraPhotos()); if(list.length<2) return;
+    list.forEach(function(src,i){
+      var f=document.createElement('figure'); f.className='aw-item'; f.tabIndex=0; f.setAttribute('role','button'); f.setAttribute('aria-label','Open photo '+(i+1)+' full size');
+      var im=new Image(); im.src=src; im.alt='Aamir Hussain Azad at work, photo '+(i+1); im.loading='lazy'; im.decoding='async'; f.appendChild(im);
+      var open=function(){ if(!lb||!lb.showModal) return; lb.querySelector('img').src=src; lb.querySelector('img').alt=im.alt; lb.showModal(); };
+      f.addEventListener('click',open); f.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(); } });
+      track.appendChild(f);
     });
+    box.hidden=false;
+    function step(d){ var item=track.querySelector('.aw-item'); var w=item?item.getBoundingClientRect().width+14:300;
+      if(d>0 && track.scrollLeft+track.clientWidth>=track.scrollWidth-4) track.scrollTo({left:0,behavior:'smooth'}); else track.scrollBy({left:d*w,behavior:'smooth'}); }
+    box.querySelectorAll('.aw-btn').forEach(function(b){ b.addEventListener('click',function(){ step(+b.getAttribute('data-dir')); }); });
+    var still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches, t=null;
+    function auto(){ if(still) return; clearInterval(t); t=setInterval(function(){ step(1); },4000); }
+    track.addEventListener('mouseenter',function(){ clearInterval(t); }); track.addEventListener('mouseleave',auto);
+    track.addEventListener('touchstart',function(){ clearInterval(t); },{passive:true});
+    auto();
+    if(lb){ lb.querySelector('.pl-close').addEventListener('click',function(){ lb.close(); }); lb.addEventListener('click',function(e){ if(e.target===lb) lb.close(); }); }
   })();
 
   // light / dark theme
