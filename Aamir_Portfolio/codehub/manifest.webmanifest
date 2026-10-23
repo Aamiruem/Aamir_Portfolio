@@ -1,0 +1,11 @@
+{
+  "name": "Aamir CodeHub",
+  "short_name": "CodeHub",
+  "description": "AI/ML, DSA and project workspace by Aamir Hussain Azad",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#2563EB",
+  "icons": [{ "src": "icons/codehub-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" }]
+}
