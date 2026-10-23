@@ -1,0 +1,12 @@
+How I segment customers: compute Recency, Frequency and Monetary value, scale them, cluster with K-Means, then give each cluster a business name like Champions, Loyal or At Risk.
+
+✅ Recency, Frequency, Monetary per customer
+✅ Scale features, then cluster with K-Means
+✅ Name clusters: Champions, Loyal, At Risk
+
+🔗 Code: https://github.com/Aamiruem/Retail-sales-customer
+🌐 Portfolio: https://aamiruem.github.io
+
+I'm open to AI/ML Engineer and MERN Developer roles. Happy to connect!
+
+#KMeans #CustomerAnalytics #MachineLearning #DataAnalytics #AIML #OpenToWork

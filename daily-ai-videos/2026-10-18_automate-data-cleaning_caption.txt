@@ -1,0 +1,12 @@
+Automation tip: if you clean data by hand every week, write the rules once in Python and log what gets rejected. My retail project rejects defective rows with clear reasons, so every KPI can be reconciled.
+
+✅ Turn manual Excel fixes into Python rules
+✅ Log every rejected row so results are auditable
+✅ Re-run the whole pipeline with one command
+
+🔗 Code: https://github.com/Aamiruem/Retail-sales-customer
+🌐 Portfolio: https://aamiruem.github.io
+
+I'm open to AI/ML Engineer and MERN Developer roles. Happy to connect!
+
+#DataCleaning #Python #Pandas #Automation #AIML #OpenToWork

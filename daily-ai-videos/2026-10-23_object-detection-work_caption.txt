@@ -1,0 +1,12 @@
+At Root Developers in Gurugram I work on object detection, image generation and crop yield prediction models, and integrate them into full-stack web apps.
+
+✅ Object detection models with TensorFlow
+✅ Crop yield prediction for agriculture
+✅ ML models shipped inside full-stack apps
+
+🔗 Code: https://aamiruem.github.io
+🌐 Portfolio: https://aamiruem.github.io
+
+I'm open to AI/ML Engineer and MERN Developer roles. Happy to connect!
+
+#ComputerVision #TensorFlow #AIML #DeepLearning #AIML #OpenToWork

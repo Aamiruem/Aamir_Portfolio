@@ -1,0 +1,12 @@
+MERN tip: split Express apps into routes, controllers and models, keep secrets in .env, and validate input before it hits MongoDB. Small habits, much easier debugging.
+
+✅ routes → controllers → models
+✅ Keep secrets in .env, never in code
+✅ Validate input before it reaches MongoDB
+
+🔗 Code: https://github.com/Aamiruem
+🌐 Portfolio: https://aamiruem.github.io
+
+I'm open to AI/ML Engineer and MERN Developer roles. Happy to connect!
+
+#ExpressJS #NodeJS #MERN #BackendDevelopment #AIML #OpenToWork
