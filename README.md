@@ -9,7 +9,7 @@ AI/ML Engineer and full-stack developer building practical machine-learning prod
 - **[Practice hub](https://aamiruem.github.io/practice/)** — DSA practice and interview preparation
 - **[Profile card](https://aamiruem.github.io/profile/)** — all links and contact details on one page
 - **[GitHub profile](https://github.com/Aamiruem)** — source code and project repositories
-- **[LinkedIn](https://www.linkedin.com/in/aamir-hussain-azad-62623924b)** — professional profile
+- **[LinkedIn](https://www.linkedin.com/in/aamir-azad-55a05a248)** — professional profile
 
 ## Featured work
 
