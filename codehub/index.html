@@ -1366,6 +1366,189 @@ section.section,.galaxy-section,.learning-hub,.striver-pro-section,.ml-hub,.aiml
 .app-browser-shell{padding-bottom:40px !important}
 @media (max-width:700px){.hero.pro-hero-v2{padding:22px 0 26px !important}.command-center{padding:24px 0 30px !important}section.section,.galaxy-section,.learning-hub,.striver-pro-section,.ml-hub,.aiml-hub,.whatsapp-ai-section,.contact-section{padding-top:24px !important;padding-bottom:24px !important}}
 </style>
+<style id="codehub-full-canvas-polish">
+/* Full-width, consistent design layer for every CodeHub workspace. */
+:root{--o-brand:#2563eb;--o-accent:#0f766e;--o-brand-soft:rgba(37,99,235,.10);--o-accent-soft:rgba(15,118,110,.10);--o-radius:18px;--o-radius-sm:12px}
+html:not(.lt){--o-brand:#60a5fa;--o-accent:#5eead4;--o-brand-soft:rgba(96,165,250,.14);--o-accent-soft:rgba(94,234,212,.12)}
+html,body{width:100%;max-width:100%;overflow-x:clip}
+body,button,input,select,textarea{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3,h4,.brand-copy strong{font-family:"Plus Jakarta Sans",Inter,ui-sans-serif,system-ui,sans-serif}
+code,pre,kbd,samp{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Consolas,monospace}
+.wrap{width:min(1680px,calc(100% - 80px))!important;max-width:none!important}
+.browser-view .wrap{width:calc(100% - 56px)!important;max-width:1520px!important}
+.section,.learning-hub,.striver-pro-section,.galaxy-section,.ml-hub,.aiml-hub,.whatsapp-ai-section,.contact-section,.professional-launch,.command-center{padding-top:clamp(54px,5vw,88px)!important;padding-bottom:clamp(54px,5vw,88px)!important}
+.section-head,.command-head,.galaxy-head{gap:clamp(24px,4vw,72px);margin-bottom:clamp(24px,3vw,40px)}
+.section-head h2,.command-head h2,.galaxy-head h2,.ml-hero h2,.aiml-main-card h2,.wa-ai-head h2{font-size:clamp(34px,3.4vw,58px)!important;line-height:1.08!important}
+.section-head p,.command-head p,.galaxy-head p,.ml-hero p,.aiml-main-card p,.wa-ai-head p{max-width:64ch}
+.hero.pro-hero-v2{min-height:calc(100svh - 68px);padding:clamp(42px,5vw,80px) 0!important}
+.hero.pro-hero-v2 .hero-grid{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr)!important;gap:clamp(32px,5vw,96px)!important}
+.pro-hero-v2 h1{font-size:clamp(54px,5.4vw,88px)!important;line-height:1.02!important;max-width:820px!important}
+.pro-hero-v2 .hero-copy{max-width:66ch!important;font-size:clamp(16px,1.15vw,19px)!important}
+.identity{gap:18px}.avatar{width:96px;height:96px;flex:0 0 auto;object-fit:cover;object-position:50% 28%;border-radius:25px!important}
+.pro-orbit-stage{width:min(100%,840px)!important;max-width:840px!important;aspect-ratio:1;margin-inline:auto!important;transform:none!important}
+.pro-orbit-stage .pro-core{width:clamp(160px,13vw,205px)}
+.pro-orbit-stage .pro-node>span{font-size:clamp(10px,.78vw,13px)!important;min-height:34px;padding:8px 12px!important;border-radius:10px!important}
+.pro-orbit-stage .orbit-caption{font-size:11px!important}
+.professional-launch-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important}
+.roadmap,.lab-grid,.projects,.contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important}
+#mlNotes .ml-grid,#aimlNotes .aiml-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}
+.striver-standalone-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important}
+.atlas-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px!important}
+.launch-card,.pro-launch,.road-card,.lab-card,.project,.ml-card,.aiml-card,.striver-pro-card,.atlas-card,.problem,.logic-step,.contact-item{border-radius:var(--o-radius)!important;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.launch-card:hover,.pro-launch:hover,.road-card:hover,.lab-card:hover,.project:hover,.ml-card:hover,.aiml-card:hover,.striver-pro-card:hover,.atlas-card:hover,.problem:hover,.logic-step:hover,.contact-item:hover{transform:translateY(-3px);box-shadow:var(--o-shadow-lg)!important}
+.launch-icon,.pro-launch>span,.tech-pill i,.lab-no,.ico,.browser-side-btn .ico{color:var(--o-brand)!important}
+.launch-icon,.pro-launch>span{background:var(--o-brand-soft)!important;border:1px solid var(--o-line)!important}
+.project{padding:18px!important;overflow:hidden}
+.project-visual{height:clamp(150px,15vw,220px);display:grid;place-items:center;margin:-18px -18px 18px;overflow:hidden;background:linear-gradient(135deg,var(--o-brand-soft),var(--o-accent-soft));border-bottom:1px solid var(--o-line)}
+.project-visual img{width:100%;height:100%;padding:12px;object-fit:contain;transition:transform .35s ease}
+.project:hover .project-visual img{transform:scale(1.045)}
+.project .pill{margin-bottom:10px}
+.btn.primary,.pro-nav-btn.contact{background:var(--o-brand)!important;color:#fff!important;border-color:var(--o-brand)!important}
+.btn.violet{color:var(--o-brand)!important;background:var(--o-brand-soft)!important}
+.pill,.tech-pill,.launch-meta{color:var(--o-muted)!important}
+.avatar,.contact-photo,.contact-person img,.project img,.aiml-card img,.ml-card img{max-width:100%;object-fit:cover;object-position:center;border-radius:var(--o-radius-sm)}
+.contact-hero{grid-template-columns:minmax(280px,.7fr) minmax(0,1.3fr)!important;gap:clamp(24px,4vw,64px)!important;padding:clamp(22px,3vw,40px)!important}
+.contact-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.metric{padding-inline:clamp(16px,2.3vw,36px)}
+.pro-tech-row{grid-template-columns:minmax(180px,240px) minmax(0,1fr)!important;gap:24px!important}
+.pro-tech-list{flex-wrap:wrap;overflow:visible}
+.navlinks{gap:clamp(2px,.45vw,8px)}
+.pro-navlinks{flex-wrap:nowrap}
+.pro-nav-btn,.pro-navlinks a{font-size:clamp(12px,.85vw,14px)!important}
+.topbar{z-index:100}
+img{height:auto}
+svg{flex-shrink:0}
+@media(max-width:1380px){
+  .wrap{width:calc(100% - 56px)!important}
+  .professional-launch-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .atlas-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+  #mlNotes .ml-grid,#aimlNotes .aiml-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:1080px){
+  .hero.pro-hero-v2{min-height:auto}
+  .hero.pro-hero-v2 .hero-grid{grid-template-columns:minmax(0,1fr)!important}
+  .pro-hero-v2 .hero-copy{max-width:74ch!important}
+  .pro-orbit-stage{width:min(760px,88vw)!important}
+  .professional-launch-grid,.roadmap,.lab-grid,.projects,.striver-standalone-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .atlas-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .contact-hero{grid-template-columns:1fr!important}
+  .contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .pro-tech-list{flex-wrap:nowrap;overflow:auto}
+}
+@media(max-width:760px){
+  .wrap{width:calc(100% - 32px)!important}
+  .browser-view .wrap{width:calc(100% - 28px)!important}
+  .pro-nav{gap:8px;min-width:0}.pro-nav>.brand{min-width:0;flex:1 1 auto}.pro-nav .brand-copy{min-width:0}.pro-mobile-toggle{flex:0 0 auto;margin-left:auto}
+  .hero.pro-hero-v2 .hero-grid,.hero.pro-hero-v2 .hero-grid>*{width:100%;max-width:100%;min-width:0}
+  .pro-hero-v2 h1,.pro-hero-v2 .hero-copy,.pro-hero-v2 .actions{width:100%;max-width:100%;min-width:0}
+  .pro-hero-v2 h1 span{white-space:normal;overflow-wrap:anywhere}
+  .hero.pro-hero-v2{padding:34px 0 28px!important}
+  .pro-hero-v2 h1{font-size:clamp(34px,8.8vw,50px)!important}
+  .identity{align-items:center}.avatar{width:76px;height:76px}
+  .pro-orbit-stage{width:min(700px,100%)!important;max-width:700px!important;aspect-ratio:1;transform:none!important;margin:0 auto!important}
+  .pro-orbit-stage .pro-ring.r-a{--radius:12vw!important}
+  .pro-orbit-stage .pro-ring.r-b{--radius:18vw!important}
+  .pro-orbit-stage .pro-ring.r-c{--radius:24vw!important}
+  .pro-orbit-stage .pro-ring.r-d{--radius:30vw!important}
+  .pro-orbit-stage .pro-node>span{font-size:10px!important;min-width:68px;min-height:30px;padding:6px 8px!important}
+  .pro-orbit-stage .pro-core{width:clamp(112px,34vw,168px)!important}
+  .professional-launch-grid,.roadmap,.lab-grid,.projects,.striver-standalone-grid,.atlas-grid,#mlNotes .ml-grid,#aimlNotes .aiml-grid,.contact-grid{grid-template-columns:minmax(0,1fr)!important}
+  .section-head{grid-template-columns:minmax(0,1fr)!important}
+  .section-head h2,.command-head h2,.galaxy-head h2,.ml-hero h2,.aiml-main-card h2,.wa-ai-head h2{font-size:clamp(30px,7vw,42px)!important}
+  .pro-tech-row{grid-template-columns:minmax(0,1fr)!important}
+  .contact-person{align-items:flex-start}
+}
+@media(max-width:400px){.pro-orbit-stage .pro-ring.r-a{--radius:11vw!important}.pro-orbit-stage .pro-ring.r-b{--radius:16vw!important}.pro-orbit-stage .pro-ring.r-c{--radius:21vw!important}.pro-orbit-stage .pro-ring.r-d{--radius:26vw!important}.pro-orbit-stage .pro-node>span{font-size:9px!important;min-width:58px;min-height:27px;padding:5px!important}}
+@media(max-width:520px){.pro-hero-v2 h1{font-size:clamp(34px,8.5vw,44px)!important}.actions{gap:8px!important}.actions>.btn{flex:0 1 auto;min-width:0;padding:10px 12px!important}.identity{gap:12px}.role{font-size:11px!important;line-height:1.5}}
+@media(prefers-reduced-motion:reduce){.pro-orbit-stage .pro-ring,.pro-orbit-stage:after{animation:none!important}}
+</style>
+<style id="single-workspace-pages">
+body.workspace-focus>main>section:not(#codehubBrowser){display:none!important}
+body.workspace-focus>main #codehubBrowser{display:block;min-height:0;padding:14px 0 36px}
+body.workspace-focus #codehubBrowser>.wrap{width:calc(100% - 48px)!important;max-width:1680px!important}
+body.workspace-focus .app-browser{min-height:0;height:auto;display:flex;flex-direction:column;overflow:visible}
+body.workspace-focus .browser-chrome{position:relative!important;top:auto!important;z-index:2}
+body.workspace-focus .browser-body{flex:initial;min-height:0;align-items:stretch}
+body.workspace-focus .browser-sidebar{position:relative;top:auto;align-self:stretch}
+body.workspace-focus .browser-viewport{min-height:70vh;overflow:visible}
+.workspace-pagebar{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:22px;align-items:center;padding:24px 30px;border-bottom:1px solid var(--o-line);background:linear-gradient(110deg,var(--o-surface),var(--o-bg2))}
+.workspace-pagecopy small{display:block;color:var(--o-brand);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:11px}
+.workspace-pagecopy h1{margin:5px 0 4px;font-size:clamp(22px,3vw,32px);letter-spacing:-.04em;color:var(--o-text)}
+.workspace-pagecopy p{margin:0;max-width:720px;color:var(--o-muted);font-size:14px;line-height:1.55}
+.workspace-pagecount{white-space:nowrap;color:var(--o-muted);font-size:13px;font-weight:700}
+.workspace-pager{display:flex;justify-content:flex-end;gap:8px}
+.workspace-pager button{border:1px solid var(--o-line);border-radius:11px;background:var(--o-surface);color:var(--o-text);padding:10px 15px;font:inherit;font-weight:700;cursor:pointer}
+.workspace-pager button:last-child{background:var(--o-brand);border-color:var(--o-brand);color:#fff}
+.workspace-pager button:disabled{opacity:.45;cursor:default}
+.workspace-footer{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(220px,.8fr) auto;gap:22px;align-items:center;padding:22px 28px;border-top:1px solid var(--o-line);background:linear-gradient(110deg,var(--o-surface),var(--o-bg2))}
+.workspace-footer-brand{display:flex;align-items:center;gap:13px;min-width:0}
+.workspace-footer-brand img{width:46px;height:46px;border-radius:15px;object-fit:cover;border:2px solid var(--o-line);box-shadow:0 5px 16px rgba(20,40,80,.12)}
+.workspace-footer-brand b{display:block;color:var(--o-text);font-size:15px}.workspace-footer-brand small{display:block;margin-top:4px;color:var(--o-muted);font-size:12px;line-height:1.5}
+.workspace-footer-note{padding-left:20px;border-left:1px solid var(--o-line);color:var(--o-muted);font-size:13px;line-height:1.65}.workspace-footer-note strong{display:block;margin-bottom:3px;color:var(--o-brand);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.workspace-footer-actions{display:flex;gap:8px;justify-content:flex-end}.workspace-footer-actions button{border:1px solid var(--o-line);border-radius:11px;background:var(--o-surface);color:var(--o-text);padding:10px 13px;font:inherit;font-size:13px;font-weight:700;white-space:nowrap;cursor:pointer}.workspace-footer-actions button:last-child{background:var(--o-brand);color:#fff;border-color:var(--o-brand)}.workspace-footer-actions button:disabled{opacity:.55;cursor:default}
+body.workspace-focus .browser-view>section{min-height:0}
+body.workspace-focus .browser-view .section-head{margin-bottom:30px;align-items:end}
+body.workspace-focus .browser-view .section-head h2,body.workspace-focus .browser-view .ml-hero h2,body.workspace-focus .browser-view .aiml-hero h2{font-size:clamp(30px,4vw,52px)!important;line-height:1.08!important;letter-spacing:-.045em!important;color:var(--o-text)!important}
+body.workspace-focus .browser-view .section-head p,body.workspace-focus .browser-view .ml-hero p,body.workspace-focus .browser-view .aiml-hero p{font-size:16px!important;line-height:1.75!important;color:var(--o-muted)!important}
+body.workspace-focus .browser-view .eyebrow{font-size:13px!important;letter-spacing:.12em;color:var(--o-brand)!important}
+body.workspace-focus .browser-view .wrap{width:calc(100% - 72px)!important;max-width:1540px!important}
+body.workspace-focus .browser-view :is(.project,.dsa-tool,.roadmap-card,.track-card,.logic-step,.metric,.ml-card,.aiml-card){box-shadow:0 10px 30px rgba(22,43,77,.06);transition:transform .2s ease,box-shadow .2s ease}
+body.workspace-focus .browser-view :is(.project,.dsa-tool,.roadmap-card,.track-card,.logic-step,.ml-card,.aiml-card):hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(22,43,77,.11)}
+body.workspace-focus .browser-view :is(img,svg){max-width:100%}
+/* Homepage skill orbit: keep its full ring system in frame and make each skill easy to scan. */
+.pro-orbit-stage{width:min(790px,100%)!important;max-width:790px!important;overflow:visible;filter:drop-shadow(0 24px 58px rgba(33,72,130,.12))!important;transform:scale(.9)}
+.pro-orbit-stage .pro-ring.r-a{--radius:128px!important;--dur:58s!important}
+.pro-orbit-stage .pro-ring.r-b{--radius:184px!important;--dur:78s!important}
+.pro-orbit-stage .pro-ring.r-c{--radius:240px!important;--dur:98s!important}
+.pro-orbit-stage .pro-ring.r-d{--radius:296px!important;--dur:118s!important}
+.pro-orbit-stage .pro-ring{animation:proOrbitSpin var(--dur) linear infinite!important}
+.pro-orbit-stage .pro-node>span{animation:proOrbitCounter var(--dur) linear infinite!important}
+.pro-orbit-stage .pro-ring.rev{animation-direction:reverse!important}
+.pro-orbit-stage .pro-ring.rev .pro-node>span{animation-name:proOrbitCounterRev!important}
+.pro-orbit-stage:hover .pro-ring,.pro-orbit-stage:hover .pro-node>span{animation-play-state:paused!important}
+.pro-orbit-stage .pro-node>span{display:flex!important;gap:7px;justify-content:center;min-width:0!important;min-height:36px!important;padding:8px 12px!important;border:1px solid color-mix(in srgb,var(--tech) 38%,var(--o-line))!important;border-left:3px solid var(--tech)!important;border-radius:12px!important;background:var(--o-surface)!important;color:var(--o-text)!important;box-shadow:0 8px 22px rgba(22,43,77,.12)!important;font-size:12px!important;font-weight:700!important;letter-spacing:-.01em}
+.pro-orbit-stage .pro-node>span:before{content:"";width:7px;height:7px;flex:0 0 7px;border-radius:50%;background:var(--tech);box-shadow:0 0 10px color-mix(in srgb,var(--tech) 42%,transparent)}
+.pro-orbit-stage .pro-node:hover>span,.pro-orbit-stage .pro-node.is-focus>span{border-color:var(--tech)!important;box-shadow:0 12px 28px color-mix(in srgb,var(--tech) 18%,transparent)!important;transform:translateY(-2px) scale(1.035)!important}
+.pro-orbit-stage .pro-core{width:clamp(168px,13vw,190px)!important;background:radial-gradient(circle at 35% 25%,var(--o-surface),var(--o-surface2))!important;border:1px solid color-mix(in srgb,var(--o-brand) 24%,var(--o-line))!important;box-shadow:0 0 0 9px color-mix(in srgb,var(--o-brand) 5%,transparent),0 28px 70px rgba(22,43,77,.17)!important}
+.pro-orbit-stage .pro-core strong{color:var(--o-text)!important;font-size:20px!important}.pro-orbit-stage .pro-core small{color:var(--o-muted)!important}
+.pro-orbit-stage .core-stack span{background:var(--o-brand-soft)!important;color:var(--o-brand)!important;border-color:var(--o-line)!important;font-size:9px!important}
+.pro-orbit-stage .pro-ring{border-color:color-mix(in srgb,var(--o-brand) 12%,var(--o-line))!important;box-shadow:none!important}
+.pro-orbit-stage .pro-ring.r-a{border-color:color-mix(in srgb,#21b8cf 20%,var(--o-line))!important}.pro-orbit-stage .pro-ring.r-b{border-color:color-mix(in srgb,#23b88a 18%,var(--o-line))!important}.pro-orbit-stage .pro-ring.r-c{border-color:color-mix(in srgb,#8b6cf6 17%,var(--o-line))!important}.pro-orbit-stage .pro-ring.r-d{border-color:color-mix(in srgb,#edaa35 16%,var(--o-line))!important}
+.orbit-caption{bottom:-12px!important;color:var(--o-muted)!important;font-size:11px!important}
+@media(min-width:761px) and (max-width:1080px){.pro-orbit-stage{width:min(850px,94vw)!important;max-width:850px!important}.pro-orbit-stage .pro-ring.r-a{--radius:15vw!important}.pro-orbit-stage .pro-ring.r-b{--radius:21vw!important}.pro-orbit-stage .pro-ring.r-c{--radius:27vw!important}.pro-orbit-stage .pro-ring.r-d{--radius:33vw!important}.pro-orbit-stage .pro-core{width:150px!important}}
+@media(max-width:760px){.pro-orbit-stage{width:min(100%,620px)!important;margin:14px auto 28px!important;transform:scale(.94)}.pro-orbit-stage .pro-ring.r-a{--radius:19vw!important}.pro-orbit-stage .pro-ring.r-b{--radius:24vw!important}.pro-orbit-stage .pro-ring.r-c{--radius:29vw!important}.pro-orbit-stage .pro-ring.r-d{--radius:34vw!important}.pro-orbit-stage .pro-node>span{min-height:27px!important;padding:4px 6px!important;font-size:9px!important;gap:4px}.pro-orbit-stage .pro-node>span:before{width:5px;height:5px;flex-basis:5px}.pro-orbit-stage .pro-core{width:clamp(112px,30vw,150px)!important}.orbit-caption{display:none!important}}
+@media(max-width:400px){.pro-orbit-stage{transform:scale(.88)}.pro-orbit-stage .pro-ring.r-a{--radius:18vw!important}.pro-orbit-stage .pro-ring.r-b{--radius:22vw!important}.pro-orbit-stage .pro-ring.r-c{--radius:27vw!important}.pro-orbit-stage .pro-ring.r-d{--radius:32vw!important}}
+@media(min-width:1081px) and (max-width:1359px){.pro-hero-v2 .hero-grid{grid-template-columns:minmax(0,1fr)!important}.pro-orbit-stage{width:min(900px,100%)!important}}
+@media(min-width:1360px){.pro-hero-v2 .hero-grid{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr)!important}}
+/* Richer page canvas, matched to both theme modes. */
+body{background-color:var(--o-bg)!important;background-image:radial-gradient(ellipse at 8% 8%,rgba(37,99,235,.11),transparent 32%),radial-gradient(ellipse at 92% 24%,rgba(20,184,166,.09),transparent 30%),radial-gradient(ellipse at 52% 78%,rgba(139,92,246,.07),transparent 34%)!important}
+html:not(.lt) body{background-image:radial-gradient(ellipse at 8% 8%,rgba(59,130,246,.18),transparent 34%),radial-gradient(ellipse at 92% 24%,rgba(20,184,166,.14),transparent 31%),radial-gradient(ellipse at 52% 78%,rgba(139,92,246,.12),transparent 36%)!important}
+.hero.pro-hero-v2{background:radial-gradient(ellipse at 74% 45%,rgba(34,211,238,.12),transparent 33%),radial-gradient(ellipse at 88% 16%,rgba(129,140,248,.13),transparent 28%),linear-gradient(130deg,var(--o-bg),var(--o-bg2) 48%,var(--o-surface))!important}
+html.lt .hero.pro-hero-v2{background:radial-gradient(ellipse at 74% 45%,rgba(34,211,238,.17),transparent 34%),radial-gradient(ellipse at 88% 16%,rgba(129,140,248,.17),transparent 28%),linear-gradient(130deg,#f8fbff,#eef4ff 52%,#f1fbfa)!important}
+.pro-orbit-stage:before{background:radial-gradient(circle at 40% 40%,rgba(59,130,246,.20),transparent 30%),radial-gradient(circle at 68% 62%,rgba(20,184,166,.19),transparent 32%),radial-gradient(circle,rgba(139,92,246,.10),transparent 68%)!important;filter:blur(20px)!important}
+.pro-orbit-stage:after{background:conic-gradient(from 12deg,rgba(34,211,238,.13),transparent 18%,rgba(139,92,246,.16),transparent 43%,rgba(20,184,166,.13),transparent 69%,rgba(245,158,11,.11),transparent)!important;filter:blur(13px)!important}
+/* Dark circular stage and brighter orbit strokes keep the paths visible in either theme. */
+.pro-orbit-stage:before{inset:3%!important;border-radius:50%!important;filter:none!important;background:radial-gradient(circle at 36% 28%,#1b3450 0%,#13243a 48%,#101b2d 76%,#111827 100%)!important;box-shadow:inset 0 0 80px rgba(35,211,238,.12),0 24px 70px rgba(15,23,42,.22)!important}
+.pro-orbit-stage:after{inset:5%!important;border-radius:50%!important;filter:blur(2px)!important;opacity:.75}
+.pro-orbit-stage .pro-ring{border-width:1.5px!important;box-shadow:0 0 13px color-mix(in srgb,var(--ring-glow,#55e7ff) 19%,transparent)!important}
+.pro-orbit-stage .pro-ring.r-a{--ring-glow:#55e7ff;border-color:rgba(85,231,255,.52)!important}
+.pro-orbit-stage .pro-ring.r-b{--ring-glow:#65e6ba;border-color:rgba(101,230,186,.48)!important}
+.pro-orbit-stage .pro-ring.r-c{--ring-glow:#a98cff;border-color:rgba(169,140,255,.52)!important}
+.pro-orbit-stage .pro-ring.r-d{--ring-glow:#ffcf66;border-color:rgba(255,207,102,.48)!important}
+.metricbar,.pro-tech-strip{background:linear-gradient(100deg,color-mix(in srgb,var(--o-brand) 5%,var(--o-bg)),color-mix(in srgb,var(--o-accent) 5%,var(--o-bg)),color-mix(in srgb,#8b5cf6 5%,var(--o-bg)))!important}
+.command-center{background:radial-gradient(ellipse at 12% 22%,rgba(37,99,235,.09),transparent 35%),radial-gradient(ellipse at 88% 76%,rgba(20,184,166,.08),transparent 32%),var(--o-bg2)!important}
+@media(max-width:900px){.workspace-footer{grid-template-columns:1fr auto}.workspace-footer-note{grid-column:1/-1;grid-row:2;border-left:0;border-top:1px solid var(--o-line);padding:13px 0 0}.workspace-footer-actions{grid-column:2;grid-row:1}}
+@media(max-width:520px){.workspace-footer{grid-template-columns:1fr;padding:18px}.workspace-footer-actions{grid-column:1;grid-row:auto;justify-content:stretch}.workspace-footer-actions button{flex:1}.workspace-pagebar{grid-template-columns:1fr}.workspace-pager{grid-column:1;grid-row:auto;flex-direction:row;justify-content:flex-start}.workspace-pagecount{grid-column:1}}
+.site-footer{padding:52px max(28px,calc((100vw - 1520px)/2)) 18px;background:var(--o-surface);border-top:1px solid var(--o-line);color:var(--o-text)}
+.site-footer-main{display:grid;grid-template-columns:1.5fr repeat(3,minmax(150px,1fr));gap:36px;max-width:1680px;margin:0 auto 38px}
+.site-footer-brand{display:flex;gap:15px;align-items:flex-start}.site-footer-mark{display:grid;place-items:center;flex:0 0 48px;height:48px;border-radius:15px;background:linear-gradient(135deg,var(--o-brand),#09a99c);color:#fff;font-size:23px;font-weight:850;letter-spacing:-.08em;box-shadow:0 10px 24px rgba(37,99,235,.2)}.site-footer-mark span{color:#a9f3e7}
+.site-footer-name{color:var(--o-text);font-size:20px;font-weight:800;letter-spacing:-.04em;text-decoration:none}.site-footer-brand p{max-width:340px;margin:8px 0 0;color:var(--o-muted);font-size:14px;line-height:1.7}
+.site-footer-group{display:flex;flex-direction:column;align-items:flex-start;gap:11px}.site-footer-group h2{margin:3px 0 5px;color:var(--o-text);font-size:13px;font-weight:800;letter-spacing:.04em}.site-footer-group button,.site-footer-group a,.site-footer-group>span{padding:0;border:0;background:none;color:var(--o-muted);font:inherit;font-size:13px;line-height:1.5;text-align:left;text-decoration:none;cursor:pointer}.site-footer-group button:hover,.site-footer-group a:hover{color:var(--o-brand)}.site-footer-group a span,.site-footer-group button span{color:var(--o-brand)}
+.site-footer-bottom{display:flex;justify-content:space-between;gap:18px;align-items:center;max-width:1680px;margin:auto;padding-top:17px;border-top:1px solid var(--o-line);color:var(--o-muted);font-size:12px}.site-footer-bottom a{color:var(--o-brand);text-decoration:none;font-weight:700;white-space:nowrap}
+@media(max-width:900px){.site-footer-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}.site-footer-brand{grid-column:1/-1}}
+@media(max-width:560px){.site-footer{padding:38px 20px 18px}.site-footer-main{grid-template-columns:1fr 1fr;gap:25px 18px}.site-footer-brand{grid-column:1/-1}.site-footer-bottom{align-items:flex-start;flex-direction:column;gap:8px}}
+@media(max-width:760px){body.workspace-focus #codehubBrowser>.wrap{width:calc(100% - 20px)!important}.workspace-pagebar{grid-template-columns:1fr auto;gap:12px;padding:18px}.workspace-pagecount{grid-column:1}.workspace-pager{grid-column:2;grid-row:1/3;flex-direction:column}.workspace-pagecopy p{font-size:13px}body.workspace-focus .browser-view .wrap{width:calc(100% - 28px)!important}}
+</style>
 </head><body>
 <header class="topbar pro-topbar">
   <div class="wrap nav pro-nav">
@@ -1431,6 +1614,7 @@ section.section,.galaxy-section,.learning-hub,.striver-pro-section,.ml-hub,.aiml
         <div class="browser-address"><span>●</span><b id="browserPath">codehub://workspace/home</b></div>
         <div class="browser-actions"><button type="button" id="browserHome" title="Workspace home">⌂</button><button type="button" id="browserClose" title="Close workspace">×</button></div>
       </div>
+      <div class="workspace-pagebar" id="workspacePagebar" aria-live="polite"><div class="workspace-pagecopy"><small>CodeHub learning path</small><h1 id="workspacePageTitle">DSA & Algorithms</h1><p id="workspacePageDescription">Build problem-solving skills with patterns, worked examples and practice.</p></div><div class="workspace-pagecount" id="workspacePageCount">Page 1 of 12</div><div class="workspace-pager"><button type="button" id="workspacePrev">← Previous</button><button type="button" id="workspaceNext">Next →</button></div></div>
       <div class="browser-body">
         <aside class="browser-sidebar">
           <div class="side-title">Workspace</div>
@@ -1473,6 +1657,11 @@ section.section,.galaxy-section,.learning-hub,.striver-pro-section,.ml-hub,.aiml
           <div class="browser-view" id="view-contact"></div>
         </div>
       </div>
+      <footer class="workspace-footer" id="workspaceFooter">
+        <div class="workspace-footer-brand"><img src="../assets/aamir-hussain-azad.webp" alt="Aamir Hussain"><div><b>Aamir CodeHub</b><small id="workspaceFooterContext">Build a concept, test it on a real problem, and keep learning one step at a time.</small></div></div>
+        <div class="workspace-footer-note"><strong id="workspaceFooterEyebrow">A note for this page</strong><span id="workspaceFooterNote">Practice the idea from this workspace, then explain why your solution works.</span></div>
+        <div class="workspace-footer-actions"><button type="button" id="workspaceFooterHome">⌂ Home</button><button type="button" id="workspaceFooterNext">Next page →</button></div>
+      </footer>
     </div>
   </div>
 </section>
@@ -1566,7 +1755,7 @@ section.section,.galaxy-section,.learning-hub,.striver-pro-section,.ml-hub,.aiml
 
 <section class="section" id="practice"><div class="wrap"><div class="section-head"><div><div class="eyebrow">06 / Interview practice sheet</div><h2>Practice the patterns.</h2></div><p>Curated LeetCode-style problems mapped to the exact patterns in the notes. Each button opens the working question + solution page.</p></div><div class="atlas-controls" id="problemFilters"><button class="chip active" data-pf="">All</button><button class="chip" data-pf="Easy">Easy</button><button class="chip" data-pf="Medium">Medium</button><button class="chip" data-pf="Hard">Hard</button></div><div class="problem-grid" id="problemGrid"></div></div></section>
 
-<section class="section" id="projects"><div class="wrap"><div class="section-head"><div><div class="eyebrow">07 / Working projects</div><h2>Algorithms + applied AI/ML.</h2></div><p>Practical projects show how data structures, Python, SQL, ML and deployment skills translate into complete products.</p></div><div class="projects"><article class="project"><span class="pill">AI/ML • Streamlit</span><h3>Indian Crop Optimization & Yield Prediction</h3><p>Machine-learning workflow using crop, weather, soil and historical production data.</p><div class="actions"><a class="btn small primary" target="_blank" rel="noopener" href="https://indian-crop-optimization-appuction-kqfhgqkn6wfg6qeb44efik.streamlit.app/">Live app ↗</a><a class="btn small" target="_blank" rel="noopener" href="https://github.com/Aamiruem/Indian-Crop-Optimization-Production">GitHub ↗</a></div></article><article class="project"><span class="pill">Analytics • Data</span><h3>Retail Sales & Customer Insights</h3><p>Python, SQL, KPI, segmentation and business analytics dashboard.</p><div class="actions"><a class="btn small primary" target="_blank" rel="noopener" href="https://retail-sales-customer-fdug7zphhdjmvfoonctdkw.streamlit.app/">Live app ↗</a><a class="btn small" target="_blank" rel="noopener" href="https://github.com/Aamiruem/Retail-sales-customer">GitHub ↗</a></div></article><article class="project"><span class="pill">FastAPI • ML</span><h3>Mental Health Score Prediction</h3><p>Prediction interface backed by a trained model and API workflow.</p><div class="actions"><a class="btn small primary" target="_blank" rel="noopener" href="https://mansik-santulan-scores-1.onrender.com/">Live app ↗</a><a class="btn small" target="_blank" rel="noopener" href="https://github.com/Aamiruem/Mansik-Santulan-Scores">GitHub ↗</a></div></article><article class="project"><span class="pill">Java • DSA</span><h3>LeetCode 150 Repository</h3><p>Java solutions for high-frequency interview problems and patterns.</p><div class="actions"><a class="btn small primary" target="_blank" rel="noopener" href="https://github.com/Aamiruem/Leetcode150">Repository ↗</a></div></article><article class="project"><span class="pill">Full Stack</span><h3>Zerodha Clone</h3><p>Trading-platform clone demonstrating reusable components and full-stack architecture.</p><div class="actions"><a class="btn small" target="_blank" rel="noopener" href="https://github.com/Aamiruem/Zerodha-Clone">GitHub ↗</a></div></article><article class="project"><span class="pill">Full Stack</span><h3>Airbnb Clone</h3><p>Tourism/stays application covering listings, responsive UI and server workflows.</p><div class="actions"><a class="btn small" target="_blank" rel="noopener" href="https://github.com/Aamiruem/Airbnb-Clone-main">GitHub ↗</a></div></article></div></div></section>
+<section class="section" id="projects"><div class="wrap"><div class="section-head"><div><div class="eyebrow">07 / Working projects</div><h2>Algorithms + applied AI/ML.</h2></div><p>Practical projects show how data structures, Python, SQL, ML and deployment skills translate into complete products.</p></div><div class="projects"><article class="project"><span class="pill">AI/ML • Streamlit</span><div class="project-visual"><img src="../Aamir_Image/data-dashboard.svg" alt="Data analytics dashboard illustration" loading="lazy"></div><h3>Indian Crop Optimization & Yield Prediction</h3><p>Machine-learning workflow using crop, weather, soil and historical production data.</p><div class="actions"><a class="btn small primary" target="_blank" rel="noopener" href="https://indian-crop-optimization-appuction-kqfhgqkn6wfg6qeb44efik.streamlit.app/">Live app ↗</a><a class="btn small" target="_blank" rel="noopener" href="https://github.com/Aamiruem/Indian-Crop-Optimization-Production">GitHub ↗</a></div></article><article class="project"><span class="pill">Analytics • Data</span><div class="project-visual"><img src="../Aamir_Image/data-dashboard.svg" alt="Retail analytics dashboard illustration" loading="lazy"></div><h3>Retail Sales & Customer Insights</h3><p>Python, SQL, KPI, segmentation and business analytics dashboard.</p><div class="actions"><a class="btn small primary" target="_blank" rel="noopener" href="https://retail-sales-customer-fdug7zphhdjmvfoonctdkw.streamlit.app/">Live app ↗</a><a class="btn small" target="_blank" rel="noopener" href="https://github.com/Aamiruem/Retail-sales-customer">GitHub ↗</a></div></article><article class="project"><span class="pill">FastAPI • ML</span><div class="project-visual"><img src="../Aamir_Image/ml-coding.svg" alt="Machine learning workflow illustration" loading="lazy"></div><h3>Mental Health Score Prediction</h3><p>Prediction interface backed by a trained model and API workflow.</p><div class="actions"><a class="btn small primary" target="_blank" rel="noopener" href="https://mansik-santulan-scores-1.onrender.com/">Live app ↗</a><a class="btn small" target="_blank" rel="noopener" href="https://github.com/Aamiruem/Mansik-Santulan-Scores">GitHub ↗</a></div></article><article class="project"><span class="pill">Java • DSA</span><div class="project-visual"><img src="../Aamir_Image/ml-coding.svg" alt="Coding and algorithms workspace illustration" loading="lazy"></div><h3>LeetCode 150 Repository</h3><p>Java solutions for high-frequency interview problems and patterns.</p><div class="actions"><a class="btn small primary" target="_blank" rel="noopener" href="https://github.com/Aamiruem/Leetcode150">Repository ↗</a></div></article><article class="project"><span class="pill">Full Stack</span><div class="project-visual"><img src="../Aamir_Image/fullstack-app.svg" alt="Full-stack web app illustration" loading="lazy"></div><h3>Zerodha Clone</h3><p>Trading-platform clone demonstrating reusable components and full-stack architecture.</p><div class="actions"><a class="btn small" target="_blank" rel="noopener" href="https://github.com/Aamiruem/Zerodha-Clone">GitHub ↗</a></div></article><article class="project"><span class="pill">Full Stack</span><div class="project-visual"><img src="../Aamir_Image/fullstack-app.svg" alt="Full-stack listings app illustration" loading="lazy"></div><h3>Airbnb Clone</h3><p>Tourism/stays application covering listings, responsive UI and server workflows.</p><div class="actions"><a class="btn small" target="_blank" rel="noopener" href="https://github.com/Aamiruem/Airbnb-Clone-main">GitHub ↗</a></div></article></div></div></section>
 
 
 <section class="whatsapp-ai-section" id="whatsappAI">
@@ -1589,6 +1778,15 @@ section.section,.galaxy-section,.learning-hub,.striver-pro-section,.ml-hub,.aiml
 <button class="wa-float" id="waFloat" type="button" data-workspace="whatsappAI" aria-label="Open internal message assistant" title="Open internal message assistant">💬</button>
 <section class="contact-section" id="contact"><div class="wrap"><div class="section-head"><div><div class="eyebrow">08 / Social & contact</div><h2>Everything in one place.</h2></div><p>Direct contact routes, professional profiles, portfolio, CodeHub and résumé.</p></div><div class="contact-hero"><div class="contact-person"><img class="contact-photo" src="../assets/aamir-hussain-azad.webp" alt="Aamir Hussain"><div><h2>Aamir Hussain</h2><div class="role">AI/ML Engineer • DSA • Data</div><p class="muted" style="margin:12px 0 0;font-size:12px">Open to AI/ML, data, analyst and software opportunities.</p></div></div><div class="contact-grid" id="contactGrid"></div></div><div class="footer"><span>© <span id="year"></span> Aamir Hussain • CodeHub Pro</span><span>Built for learning, interviews and professional opportunities.</span></div></div></section>
 </main>
+<footer class="site-footer" id="siteFooter">
+  <div class="site-footer-main">
+    <div class="site-footer-brand"><span class="site-footer-mark" aria-hidden="true">A<span>.</span></span><div><a class="site-footer-name" href="#home">Aamir CodeHub</a><p>Practical learning and engineering notes for machine learning, AI and problem solving.</p></div></div>
+    <div class="site-footer-group"><h2>Explore</h2><button data-workspace="dsaHome">DSA Hub</button><button data-workspace="mlNotes">Machine Learning</button><button data-workspace="aimlNotes">AI / ML Notes</button><button data-workspace="projects">Projects</button></div>
+    <div class="site-footer-group"><h2>Engineering focus</h2><span>Machine learning & evaluation</span><span>GenAI, NLP & RAG</span><span>Algorithms & interview practice</span><span>APIs, deployment & MLOps</span></div>
+    <div class="site-footer-group site-footer-connect"><h2>Connect</h2><a href="https://github.com/Aamiruem" target="_blank" rel="noopener">GitHub <span>↗</span></a><a href="https://www.linkedin.com/in/aamir-azad-55a05a248" target="_blank" rel="noopener">LinkedIn <span>↗</span></a><button data-workspace="contact">Contact Aamir <span>→</span></button></div>
+  </div>
+  <div class="site-footer-bottom"><span>© <span id="siteFooterYear"></span> Aamir Hussain</span><span>Built for curious minds and practical problem solving.</span><a href="#home">Back to top ↑</a></div>
+</footer>
 
 <div class="modal problem-modal" id="sheetModal" aria-hidden="true"><div class="modal-panel"><div class="modal-head"><div><div class="eyebrow" id="sheetMeta"></div><h2 id="sheetTitle"></h2><p class="muted" id="sheetSummary" style="margin:0"></p></div><button class="close" id="sheetClose" aria-label="Close solution">✕</button></div><div class="tabs" id="sheetTabs"><button class="tab active" data-stab="logic">Logic</button><button class="tab" data-stab="python">Python</button><button class="tab" data-stab="java">Java</button><button class="tab" data-stab="dry">▶ Dry Run</button></div><div class="tabpane active" data-spane="logic" id="sheetLogic"></div><div class="tabpane" data-spane="python" id="sheetPython"></div><div class="tabpane" data-spane="java" id="sheetJava"></div><div class="tabpane" data-spane="dry" id="sheetDry"></div></div></div>
 <div class="modal" id="lessonModal" aria-hidden="true"><div class="modal-panel"><div class="modal-head"><div><div class="eyebrow" id="modalMeta"></div><h2 id="modalTitle"></h2><p class="muted" id="modalSummary" style="margin:0"></p></div><button class="close" id="modalClose" aria-label="Close lesson">✕</button></div><div class="tabs"><button class="tab active" data-tab="notes">Notes & Logic</button><button class="tab" data-tab="python">Python</button><button class="tab" data-tab="java">Java</button><button class="tab" data-tab="dry">▶ Dry Run</button><button class="tab" data-tab="interview">Interview Notes</button></div><div class="tabpane active" data-pane="notes" id="paneNotes"></div><div class="tabpane" data-pane="python" id="panePython"></div><div class="tabpane" data-pane="java" id="paneJava"></div><div class="tabpane" data-pane="dry" id="paneDry"></div><div class="tabpane" data-pane="interview" id="paneInterview"></div></div></div>
@@ -2206,9 +2404,14 @@ window.AIML_DATA=[["Foundations","AI vs ML vs DL vs Data Science","AI is the bro
 <script id="pro-internal-browser-controller">
 (()=>{
   const heavyIds=['algorithmGalaxy','roadmap','tracks','striverSheet','notes','atlas','mlNotes','aimlNotes','logic','practice','projects','whatsappAI','contact'];
+  const pageIds=['dsaHome',...heavyIds];
   const labels={dsaHome:'DSA Complete Hub',algorithmGalaxy:'Algorithm Galaxy',roadmap:'DSA Learning Roadmap',tracks:'Kunal + Striver Tracks',striverSheet:'Striver A2Z Workspace',notes:'Complete DSA Notes',atlas:'All Algorithms',mlNotes:'Machine Learning Complete Notes',aimlNotes:'AIML Complete Notes',logic:'Logic Building Lab',practice:'Interview Practice',projects:'AI/ML Projects',whatsappAI:'Internal Smart Message',contact:'Social & Contact'};
   const paths={dsaHome:'dsa',algorithmGalaxy:'dsa/algorithm-galaxy',roadmap:'dsa/roadmap',tracks:'dsa/tracks',striverSheet:'striver/a2z',notes:'dsa/notes',atlas:'dsa/algorithms',mlNotes:'ml/complete-notes',aimlNotes:'aiml/notes',logic:'dsa/logic',practice:'dsa/practice',projects:'portfolio/projects',whatsappAI:'message/internal',contact:'contact'};
+  const descriptions={dsaHome:'Build problem-solving skills with patterns, worked examples and practice.',algorithmGalaxy:'Explore how algorithms connect, when to use them and what trade-offs they make.',roadmap:'Follow a practical path from core programming foundations to advanced interview topics.',tracks:'Choose a guided DSA track and build steady practice habits.',striverSheet:'Work through topic-based interview problems with solutions and dry runs.',notes:'Study core DSA concepts with explanations, code and worked examples.',atlas:'Search a quick reference map of algorithms, data structures and common use cases.',mlNotes:'Learn machine learning from data foundations through model evaluation and deployment.',aimlNotes:'Explore AI, deep learning, NLP, computer vision, transformers and MLOps.',logic:'Practice the reasoning steps that turn a real problem into reliable code.',practice:'Apply patterns to curated problems and check your solution approach.',projects:'See applied AI/ML and software projects, their problem statements and implementation stacks.',whatsappAI:'Use the built-in assistant to ask about the CodeHub and its learning resources.',contact:'Find Aamir’s professional profiles and contact routes.'};
+  const footerNotes={dsaHome:'Start with one module, finish a small exercise, then move on when you can explain your approach.',algorithmGalaxy:'Use the atlas as a map: connect each algorithm to the problem signal that calls for it.',roadmap:'Build strong fundamentals first; later topics become easier when the basics are reliable.',tracks:'Choose a realistic weekly target and review mistakes before adding more problems.',striverSheet:'Attempt each problem before opening the solution, then compare complexity and edge cases.',notes:'Write down the key invariant or idea in your own words after each lesson.',atlas:'Compare time and space costs against the input constraints before choosing an algorithm.',mlNotes:'For every model, ask what the baseline is, how it is evaluated, and how it behaves on unseen data.',aimlNotes:'Connect each AI method to its data, objective, evaluation metric and deployment limits.',logic:'State the input, output and edge cases first; then choose a pattern and trace it by hand.',practice:'After solving, explain correctness and test empty, tiny and boundary inputs.',projects:'Look for the full path from a real user problem through data, model, evaluation and deployment.',whatsappAI:'Ask a clear question about the portfolio or learning resources to get the most useful response.',contact:'For a professional conversation, include the role or project and the best way to reach you.'};
+  const footerLabels={dsaHome:'Start here',algorithmGalaxy:'Algorithm guide',roadmap:'Learning strategy',tracks:'Study plan',striverSheet:'Practice tip',notes:'Revision tip',atlas:'Selection guide',mlNotes:'ML workflow',aimlNotes:'AI/ML perspective',logic:'Problem-solving habit',practice:'Interview habit',projects:'Project lens',whatsappAI:'How to use this page',contact:'Get in touch'};
   const shell=document.getElementById('codehubBrowser'),path=document.getElementById('browserPath');
+  document.getElementById('siteFooterYear').textContent=String(new Date().getFullYear());
 
   function mount(){
     heavyIds.forEach(id=>{const sec=document.getElementById(id),view=document.getElementById('view-'+id);if(sec&&view&&!view.contains(sec))view.appendChild(sec)});
@@ -2219,7 +2422,20 @@ window.AIML_DATA=[["Foundations","AI vs ML vs DL vs Data Science","AI is the bro
     document.querySelectorAll('.browser-view').forEach(v=>v.classList.toggle('active',v===target));
     document.querySelectorAll('.browser-side-btn').forEach(b=>b.classList.toggle('active',b.dataset.workspace===id || (id==='dsaHome'&&b.dataset.workspace==='dsaHome')));
     document.querySelectorAll('.pro-nav-btn[data-workspace]').forEach(b=>b.classList.toggle('active',b.dataset.workspace===id));
+    const pageIndex=Math.max(0,pageIds.indexOf(id));
+    document.getElementById('workspacePageTitle').textContent=labels[id]||'DSA & Algorithms';
+    document.getElementById('workspacePageDescription').textContent=descriptions[id]||'';
+    document.getElementById('workspacePageCount').textContent=`Page ${pageIndex+1} of ${pageIds.length}`;
+    document.getElementById('workspacePrev').disabled=pageIndex===0;
+    document.getElementById('workspaceNext').disabled=pageIndex===pageIds.length-1;
+    document.getElementById('workspaceFooterContext').textContent=`${labels[id]||'CodeHub'} • Aamir Hussain, AI/ML Engineer`;
+    document.getElementById('workspaceFooterEyebrow').textContent=footerLabels[id]||'Keep learning';
+    document.getElementById('workspaceFooterNote').textContent=footerNotes[id]||descriptions[id]||'Keep learning through clear explanations and practical examples.';
+    const footerNext=document.getElementById('workspaceFooterNext');
+    footerNext.disabled=pageIndex===pageIds.length-1;
+    footerNext.textContent=pageIndex===pageIds.length-1?'End of path':`Next: ${labels[pageIds[pageIndex+1]]||'Next page'} →`;
     if(path)path.textContent='codehub://workspace/'+(paths[id]||id);
+    document.body.classList.add('workspace-focus');
     shell?.classList.add('open');
     localStorage.setItem('aamir_codehub_last_workspace',id);
     setTimeout(()=>shell?.scrollIntoView({behavior:'smooth',block:'start'}),30);
@@ -2233,8 +2449,13 @@ window.AIML_DATA=[["Foundations","AI vs ML vs DL vs Data Science","AI is the bro
     const id=(a.getAttribute('href')||'').slice(1);
     if(heavyIds.includes(id)){e.preventDefault();setActive(id)}
   });
-  document.getElementById('browserHome')?.addEventListener('click',()=>setActive('dsaHome'));
-  document.getElementById('browserClose')?.addEventListener('click',()=>{shell?.classList.remove('open');document.getElementById('commandCenter')?.scrollIntoView({behavior:'smooth',block:'start'})});
+  document.getElementById('workspacePrev')?.addEventListener('click',()=>{const i=pageIds.indexOf(document.querySelector('.browser-view.active')?.id.replace('view-',''));if(i>0)setActive(pageIds[i-1])});
+  document.getElementById('workspaceNext')?.addEventListener('click',()=>{const i=pageIds.indexOf(document.querySelector('.browser-view.active')?.id.replace('view-',''));if(i<pageIds.length-1)setActive(pageIds[i+1])});
+  document.getElementById('workspaceFooterNext')?.addEventListener('click',()=>{const i=pageIds.indexOf(document.querySelector('.browser-view.active')?.id.replace('view-',''));if(i<pageIds.length-1)setActive(pageIds[i+1])});
+  document.getElementById('workspaceFooterHome')?.addEventListener('click',()=>{document.body.classList.remove('workspace-focus');shell?.classList.remove('open');document.getElementById('home')?.scrollIntoView({behavior:'smooth',block:'start'})});
+  document.querySelectorAll('a[href="#home"]').forEach(a=>a.addEventListener('click',()=>{document.body.classList.remove('workspace-focus');shell?.classList.remove('open')}));
+  document.getElementById('browserHome')?.addEventListener('click',()=>{document.body.classList.remove('workspace-focus');shell?.classList.remove('open');document.getElementById('home')?.scrollIntoView({behavior:'smooth',block:'start'})});
+  document.getElementById('browserClose')?.addEventListener('click',()=>{document.body.classList.remove('workspace-focus');shell?.classList.remove('open');document.getElementById('commandCenter')?.scrollIntoView({behavior:'smooth',block:'start'})});
 
   // Keep WhatsApp/contact UX internal. Do not open wa.me from the CodeHub controls.
   const status=document.getElementById('waInternalStatus');
