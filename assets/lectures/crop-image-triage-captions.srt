@@ -1,0 +1,179 @@
+1
+00:00:00,000 --> 00:00:04,244
+A field worker takes a photo of a crop that
+
+2
+00:00:04,244 --> 00:00:08,489
+may be under stress. The real problem is not just
+
+3
+00:00:08,489 --> 00:00:12,733
+asking a model to name a disease. A wrong confident
+
+4
+00:00:12,733 --> 00:00:16,977
+answer can waste a farmer’s time, while a useful system
+
+5
+00:00:16,977 --> 00:00:21,221
+needs to say what it saw, how sure it is,
+
+6
+00:00:21,221 --> 00:00:25,466
+and when a person should take over. In this lesson,
+
+7
+00:00:25,466 --> 00:00:29,710
+we’ll design a small image-triage pipeline around that real constraint.
+
+8
+00:00:29,710 --> 00:00:34,791
+Start with a narrow, testable goal: identify a short list
+
+9
+00:00:34,791 --> 00:00:39,873
+of visible symptoms and route uncertain photos for human review.
+
+10
+00:00:39,873 --> 00:00:44,954
+Do not promise a diagnosis from one photo. Define the
+
+11
+00:00:44,954 --> 00:00:50,035
+classes with an agronomist, collect examples across farms, phones, lighting,
+
+12
+00:00:50,035 --> 00:00:55,117
+and growth stages, and record the image’s location and date
+
+13
+00:00:55,117 --> 00:00:59,690
+only when the user has agreed to that collection.
+
+14
+00:00:59,690 --> 00:01:04,463
+The split matters as much as the model. If near-identical
+
+15
+00:01:04,463 --> 00:01:09,237
+photos from the same plant land in both training and
+
+16
+00:01:09,237 --> 00:01:14,010
+test sets, your test score can look excellent while the
+
+17
+00:01:14,010 --> 00:01:18,784
+model fails on a new farm. Split by farm or
+
+18
+00:01:18,784 --> 00:01:23,557
+collection session first. Keep a final untouched test set, inspect
+
+19
+00:01:23,557 --> 00:01:28,331
+class balance, and label uncertain examples for review instead of
+
+20
+00:01:28,331 --> 00:01:30,240
+quietly forcing a label.
+
+21
+00:01:30,240 --> 00:01:35,569
+For object detection, each example needs a class and a
+
+22
+00:01:35,569 --> 00:01:40,897
+bounding box around the visible symptom. Train a baseline detector,
+
+23
+00:01:40,897 --> 00:01:46,226
+then inspect precision and recall per class. If missing a
+
+24
+00:01:46,226 --> 00:01:51,554
+severe symptom is costly, monitor recall; if false alarms overwhelm
+
+25
+00:01:51,554 --> 00:01:56,883
+the field team, monitor precision too. A single overall accuracy
+
+26
+00:01:56,883 --> 00:02:02,211
+number hides both failure modes. Review the confusion matrix and
+
+27
+00:02:02,211 --> 00:02:07,540
+sample false positives and false negatives with a domain expert.
+
+28
+00:02:07,540 --> 00:02:12,887
+At inference time, do not turn every prediction into an
+
+29
+00:02:12,887 --> 00:02:18,234
+alert. Apply a confidence threshold chosen on validation data. High-confidence
+
+30
+00:02:18,234 --> 00:02:23,582
+results can show the detected region and a cautious next
+
+31
+00:02:23,582 --> 00:02:28,929
+step. Low-confidence or out-of-distribution photos should say “needs review.” The
+
+32
+00:02:28,929 --> 00:02:34,276
+safe fallback is part of the product, not a failure
+
+33
+00:02:34,276 --> 00:02:35,880
+of the model.
+
+34
+00:02:35,880 --> 00:02:40,715
+A production request can carry an image and a request
+
+35
+00:02:40,715 --> 00:02:45,550
+ID. Validate file type and size, reject unreadable images, run
+
+36
+00:02:45,550 --> 00:02:50,385
+inference in a worker, and return the model version with
+
+37
+00:02:50,385 --> 00:02:55,220
+each result. Store only the image and metadata the user
+
+38
+00:02:55,220 --> 00:03:00,055
+has consented to retain. Log latency and review outcomes so
+
+39
+00:03:00,055 --> 00:03:04,890
+the team can spot drift without treating a model score
+
+40
+00:03:04,890 --> 00:03:06,340
+as ground truth.
+
+41
+00:03:06,340 --> 00:03:11,417
+The useful deliverable is a measured triage workflow: a carefully
+
+42
+00:03:11,417 --> 00:03:16,493
+split dataset, per-class metrics, a human-review path, and a service
+
+43
+00:03:16,493 --> 00:03:21,570
+that exposes uncertainty. Start with one crop and one field
+
+44
+00:03:21,570 --> 00:03:26,646
+partner, learn from reviewed examples, and expand only when the
+
+45
+00:03:26,646 --> 00:03:30,200
+system helps people make a better decision.

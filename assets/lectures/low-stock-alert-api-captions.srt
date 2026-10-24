@@ -1,0 +1,155 @@
+1
+00:00:00,000 --> 00:00:04,800
+A shop owner discovers an item is out of stock
+
+2
+00:00:04,800 --> 00:00:09,600
+only after a customer orders it. We’ll build the first
+
+3
+00:00:09,600 --> 00:00:14,400
+slice of a low-stock alert API. The goal is simple:
+
+4
+00:00:14,400 --> 00:00:19,200
+safely update stock, return the current item, and create an
+
+5
+00:00:19,200 --> 00:00:24,000
+alert only when stock crosses the threshold. The edge cases
+
+6
+00:00:24,000 --> 00:00:26,880
+are where the useful engineering happens.
+
+7
+00:00:26,880 --> 00:00:32,202
+Represent an item with a name, nonnegative integer quantity, and
+
+8
+00:00:32,202 --> 00:00:37,524
+nonnegative integer reorder threshold. Keep the MongoDB model responsible for
+
+9
+00:00:37,524 --> 00:00:42,846
+stored shape, and validate requests at the API boundary so
+
+10
+00:00:42,846 --> 00:00:48,168
+bad input gets a clear response before it reaches the
+
+11
+00:00:48,168 --> 00:00:48,700
+database.
+
+12
+00:00:48,700 --> 00:00:53,626
+Keep the route thin. It declares the URL and middleware;
+
+13
+00:00:53,626 --> 00:00:58,552
+the controller handles the request and response; the model handles
+
+14
+00:00:58,552 --> 00:01:03,479
+persistence. This split makes it easier to test each rule
+
+15
+00:01:03,479 --> 00:01:08,405
+and add authentication later without mixing business logic into the
+
+16
+00:01:08,405 --> 00:01:09,390
+route file.
+
+17
+00:01:09,390 --> 00:01:14,562
+Accept a quantity update only when it is an integer
+
+18
+00:01:14,562 --> 00:01:19,735
+greater than or equal to zero. Do not use a
+
+19
+00:01:19,735 --> 00:01:24,907
+truthiness check: zero is a valid quantity. Validate the item
+
+20
+00:01:24,907 --> 00:01:30,080
+ID, return 404 for a missing item, and return 400
+
+21
+00:01:30,080 --> 00:01:35,252
+for malformed input. Use an atomic database update so two
+
+22
+00:01:35,252 --> 00:01:39,390
+requests do not overwrite one another’s stock changes.
+
+23
+00:01:39,390 --> 00:01:44,145
+An alert should be created when quantity moves from above
+
+24
+00:01:44,145 --> 00:01:48,901
+the threshold to at or below it. If every edit
+
+25
+00:01:48,901 --> 00:01:53,656
+while an item stays low creates another alert, the system
+
+26
+00:01:53,656 --> 00:01:58,412
+will spam the owner. Compare the previous and updated state,
+
+27
+00:01:58,412 --> 00:02:03,167
+and attach a stable idempotency key such as item ID
+
+28
+00:02:03,167 --> 00:02:07,922
+plus the inventory change ID. A unique index can prevent
+
+29
+00:02:07,922 --> 00:02:10,300
+retries from creating duplicate alerts.
+
+30
+00:02:10,300 --> 00:02:15,795
+Require authentication for stock changes, limit request size, and never
+
+31
+00:02:15,795 --> 00:02:21,289
+expose secrets in the repository. Add structured logs with the
+
+32
+00:02:21,289 --> 00:02:26,784
+request ID and outcome, but do not log passwords or
+
+33
+00:02:26,784 --> 00:02:32,279
+sensitive customer data. Test the important cases: quantity zero, negative
+
+34
+00:02:32,279 --> 00:02:37,773
+quantity, missing item, a threshold crossing, an update that stays
+
+35
+00:02:37,773 --> 00:02:41,070
+below threshold, and a retried request.
+
+36
+00:02:41,070 --> 00:02:46,050
+The finished slice is more than a POST endpoint. It
+
+37
+00:02:46,050 --> 00:02:51,030
+has clear validation, atomic persistence, deliberate alert rules, and predictable
+
+38
+00:02:51,030 --> 00:02:56,010
+errors. That is the difference between code that works in
+
+39
+00:02:56,010 --> 00:03:00,990
+one demo and an API a shop can rely on.
