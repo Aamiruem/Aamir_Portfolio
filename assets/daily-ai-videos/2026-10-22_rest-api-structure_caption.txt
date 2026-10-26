@@ -5,7 +5,7 @@ MERN tip: split Express apps into routes, controllers and models, keep secrets i
 ✅ Validate input before it reaches MongoDB
 
 🔗 Code: https://github.com/Aamiruem
-🌐 Portfolio: https://aamiruem.github.io
+🌐 Portfolio: https://aamir-hussain-azad.vercel.app
 
 I'm open to AI/ML Engineer and MERN Developer roles. Happy to connect!
 

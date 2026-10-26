@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://aamiruem.github.io/</loc>
+    <loc>https://aamir-hussain-azad.vercel.app/</loc>
     <lastmod>2026-10-26</lastmod>
-    <image:image><image:loc>https://aamiruem.github.io/assets/aamir-hussain-azad.webp</image:loc></image:image>
-    <image:image><image:loc>https://aamiruem.github.io/assets/photos/aamir-work-2.jpg</image:loc></image:image>
-    <image:image><image:loc>https://aamiruem.github.io/assets/og-image.jpg</image:loc></image:image>
+    <image:image><image:loc>https://aamir-hussain-azad.vercel.app/assets/aamir-hussain-azad.webp</image:loc></image:image>
+    <image:image><image:loc>https://aamir-hussain-azad.vercel.app/assets/photos/aamir-work-2.jpg</image:loc></image:image>
+    <image:image><image:loc>https://aamir-hussain-azad.vercel.app/assets/og-image.jpg</image:loc></image:image>
   </url>
-  <url><loc>https://aamiruem.github.io/profile/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://aamiruem.github.io/resume/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://aamiruem.github.io/codehub/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://aamiruem.github.io/practice/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://aamir-hussain-azad.vercel.app/profile/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://aamir-hussain-azad.vercel.app/resume/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://aamir-hussain-azad.vercel.app/codehub/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://aamir-hussain-azad.vercel.app/practice/</loc><lastmod>2026-10-26</lastmod></url>
 </urlset>

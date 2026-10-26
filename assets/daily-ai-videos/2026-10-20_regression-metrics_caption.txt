@@ -4,8 +4,8 @@ Quick ML refresher from my crop yield work: MAE tells you the typical error, RMS
 ✅ RMSE: punishes big misses harder
 ✅ R²: share of variance the model explains
 
-🔗 Code: https://aamiruem.github.io
-🌐 Portfolio: https://aamiruem.github.io
+🔗 Code: https://aamir-hussain-azad.vercel.app
+🌐 Portfolio: https://aamir-hussain-azad.vercel.app
 
 I'm open to AI/ML Engineer and MERN Developer roles. Happy to connect!
 

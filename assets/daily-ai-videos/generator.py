@@ -7,7 +7,7 @@ Needs: playwright (chromium) and ffmpeg.
 """
 import datetime, os, subprocess, sys, tempfile, html
 
-PORTFOLIO = "aamiruem.github.io"
+PORTFOLIO = "aamir-hussain-azad.vercel.app"
 GITHUB = "github.com/Aamiruem"
 NAME = "Aamir Hussain Azad"
 ROLE = "AI/ML Engineer & MERN Developer"

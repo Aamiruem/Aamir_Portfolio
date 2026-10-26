@@ -14,3 +14,5 @@ venv/
 # Logs / temp
 *.log
 *.tmp
+.vercel
+.env*

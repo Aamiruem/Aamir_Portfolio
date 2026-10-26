@@ -4,10 +4,10 @@ AI/ML Engineer and full-stack developer building practical machine-learning prod
 
 ## Explore
 
-- **[Portfolio](https://aamiruem.github.io/)** — profile, experience, skills, and selected case studies
-- **[CodeHub](https://aamiruem.github.io/codehub/)** — AI/ML, DSA, and learning projects
-- **[Practice hub](https://aamiruem.github.io/practice/)** — DSA practice and interview preparation
-- **[Profile card](https://aamiruem.github.io/profile/)** — all links and contact details on one page
+- **[Portfolio](https://aamir-hussain-azad.vercel.app/)** — profile, experience, skills, and selected case studies
+- **[CodeHub](https://aamir-hussain-azad.vercel.app/codehub/)** — AI/ML, DSA, and learning projects
+- **[Practice hub](https://aamir-hussain-azad.vercel.app/practice/)** — DSA practice and interview preparation
+- **[Profile card](https://aamir-hussain-azad.vercel.app/profile/)** — all links and contact details on one page
 - **[GitHub profile](https://github.com/Aamiruem)** — source code and project repositories
 - **[LinkedIn](https://www.linkedin.com/in/aamir-azad-55a05a248)** — professional profile
 
@@ -28,20 +28,20 @@ Python · Machine Learning · Computer Vision · TensorFlow · scikit-learn · S
 
 [aamirhussainazad786@gmail.com](mailto:aamirhussainazad786@gmail.com)
 
-## Going live (GitHub Pages)
+## Hosting (Vercel)
 
-The site is built for the root URL **https://aamiruem.github.io/** (canonical tags, sitemap and icons all use it). For GitHub to serve it there, the repository must be named exactly `aamiruem.github.io`:
+Live at **https://aamir-hussain-azad.vercel.app/** — canonical tags, sitemap, robots.txt and structured data all use this URL.
 
-1. GitHub → this repo → **Settings → General → Repository name** → rename to `aamiruem.github.io`.
-2. **Settings → Pages → Build and deployment** → Source: *Deploy from a branch*, Branch: `main` / `(root)` → Save.
-3. Update the local remote: `git remote set-url origin https://github.com/Aamiruem/aamiruem.github.io.git`
-4. Wait 1–2 minutes and open https://aamiruem.github.io/.
+- Vercel project: `aamir-hussain-azad` (static site, Framework Preset *Other*, no build step). `vercel.json` sets clean URLs, caching and security headers.
+- Every push to `main` deploys automatically once the GitHub repo is connected in Vercel → Project → Settings → Git.
+- Manual deploy from this folder: `npx vercel --prod`
+- Custom domain later: Vercel → Settings → Domains, then replace `aamir-hussain-azad.vercel.app` across the repo with the new domain.
 
 ## Getting found on Google for "Aamir Hussain Azad"
 
-1. Open [Google Search Console](https://search.google.com/search-console) → add a **URL prefix** property `https://aamiruem.github.io/`.
+1. Open [Google Search Console](https://search.google.com/search-console) → add a **URL prefix** property `https://aamir-hussain-azad.vercel.app/`.
 2. Choose the **HTML tag** method, paste the tag into `index.html` where the `google-site-verification` comment is, push, then click Verify.
 3. **Sitemaps** → submit `sitemap.xml`.
-4. **URL Inspection** → enter `https://aamiruem.github.io/` → **Request indexing** (repeat for `/resume/` and `/profile/`).
+4. **URL Inspection** → enter `https://aamir-hussain-azad.vercel.app/` → **Request indexing** (repeat for `/resume/` and `/profile/`).
 5. Do the same in [Bing Webmaster Tools](https://www.bing.com/webmasters) (can import from Search Console).
 6. Link the portfolio from every profile you own — GitHub profile *Website* field, LinkedIn *Contact info → Website*, LeetCode, Instagram bio. These backlinks are what makes Google connect the name to the site.
