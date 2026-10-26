@@ -3415,6 +3415,8 @@ var st=document.createElement('style');st.id='pre-route';st.textContent=hide.joi
     .photo-bg{display:none;}
     #grid-bg{transition:none;}
   }
+  /* the open phone menu needs the full screen: hide the bottom call/WhatsApp bar */
+  body.nav-menu-open .fab-wrap{display:none !important;}
 </style>
 </head>
 <body>
@@ -5063,7 +5065,6 @@ var st=document.createElement('style');st.id='pre-route';st.textContent=hide.joi
             <div class="rag-links">
               <a class="rag-btn req" href="#project-form" data-ptype="AI chatbot (RAG)">&#128736;&#65039; Request similar</a>
               <a class="rag-btn primary" href="codehub/" target="_blank" rel="me noopener noreferrer">&#127760; Portfolio</a>
-              <a class="rag-btn accent" href="https://auto-reply-chat-4.emergent.host" target="_blank" rel="noopener">&#9889; Try Chat</a>
               <a class="rag-btn secondary" href="https://github.com/Aamiruem" target="_blank" rel="me noopener noreferrer">&#8599; GitHub</a>
             </div>
           </div>
@@ -6719,6 +6720,7 @@ var st=document.createElement('style');st.id='pre-route';st.textContent=hide.joi
   function setNavOpen(open){
     if(!navToggle || !headerEl) return;
     headerEl.classList.toggle('nav-open', !!open);
+    document.body.classList.toggle('nav-menu-open', !!open);
     navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     navToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
     if(toggleLabel) toggleLabel.textContent = open ? 'Close' : 'Menu';
