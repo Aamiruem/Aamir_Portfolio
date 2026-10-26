@@ -27,3 +27,21 @@ Python · Machine Learning · Computer Vision · TensorFlow · scikit-learn · S
 ## Contact
 
 [aamirhussainazad786@gmail.com](mailto:aamirhussainazad786@gmail.com)
+
+## Going live (GitHub Pages)
+
+The site is built for the root URL **https://aamiruem.github.io/** (canonical tags, sitemap and icons all use it). For GitHub to serve it there, the repository must be named exactly `aamiruem.github.io`:
+
+1. GitHub → this repo → **Settings → General → Repository name** → rename to `aamiruem.github.io`.
+2. **Settings → Pages → Build and deployment** → Source: *Deploy from a branch*, Branch: `main` / `(root)` → Save.
+3. Update the local remote: `git remote set-url origin https://github.com/Aamiruem/aamiruem.github.io.git`
+4. Wait 1–2 minutes and open https://aamiruem.github.io/.
+
+## Getting found on Google for "Aamir Hussain Azad"
+
+1. Open [Google Search Console](https://search.google.com/search-console) → add a **URL prefix** property `https://aamiruem.github.io/`.
+2. Choose the **HTML tag** method, paste the tag into `index.html` where the `google-site-verification` comment is, push, then click Verify.
+3. **Sitemaps** → submit `sitemap.xml`.
+4. **URL Inspection** → enter `https://aamiruem.github.io/` → **Request indexing** (repeat for `/resume/` and `/profile/`).
+5. Do the same in [Bing Webmaster Tools](https://www.bing.com/webmasters) (can import from Search Console).
+6. Link the portfolio from every profile you own — GitHub profile *Website* field, LinkedIn *Contact info → Website*, LeetCode, Instagram bio. These backlinks are what makes Google connect the name to the site.
