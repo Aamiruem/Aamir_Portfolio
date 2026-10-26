@@ -2,7 +2,7 @@
 
 Usage:  python3 generator.py [YYYY-MM-DD] [out_dir]
 Picks the day's topic from TOPICS (rotates by date), renders a 1080x1080 MP4
-(about 19 s, no audio) plus a LinkedIn caption .txt, and prints both paths.
+(about 17 s; narration is added afterwards with an en-IN neural voice) plus a LinkedIn caption .txt, and prints both paths.
 Needs: playwright (chromium) and ffmpeg.
 """
 import datetime, os, subprocess, sys, tempfile, html

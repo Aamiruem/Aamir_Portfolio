@@ -1,11 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://aamir-hussain-azad.vercel.app/</loc>
     <lastmod>2026-10-26</lastmod>
     <image:image><image:loc>https://aamir-hussain-azad.vercel.app/assets/aamir-hussain-azad.webp</image:loc></image:image>
-    <image:image><image:loc>https://aamir-hussain-azad.vercel.app/assets/photos/aamir-work-2.jpg</image:loc></image:image>
+    <image:image><image:loc>https://aamir-hussain-azad.vercel.app/assets/photos/aamir-work-2.webp</image:loc></image:image>
     <image:image><image:loc>https://aamir-hussain-azad.vercel.app/assets/og-image.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://aamir-hussain-azad.vercel.app/assets/photos/aamir-work-3.webp</video:thumbnail_loc>
+      <video:title>From field photo to useful crop alert</video:title>
+      <video:description>Lecture by Aamir Hussain Azad: turning a farmer&#x27;s field photo into a useful crop alert with image triage and machine learning.</video:description>
+      <video:content_loc>https://aamir-hussain-azad.vercel.app/assets/lectures/crop-image-triage.mp4</video:content_loc>
+      <video:duration>224</video:duration>
+      <video:publication_date>2026-10-24T09:00:00+05:30</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://aamir-hussain-azad.vercel.app/assets/photos/aamir-work-1.webp</video:thumbnail_loc>
+      <video:title>Build a low-stock alert API that does not spam</video:title>
+      <video:description>Lecture by Aamir Hussain Azad: designing a low-stock alert API with thresholds and cooldowns so alerts stay useful.</video:description>
+      <video:content_loc>https://aamir-hussain-azad.vercel.app/assets/lectures/low-stock-alert-api.mp4</video:content_loc>
+      <video:duration>186</video:duration>
+      <video:publication_date>2026-10-24T09:00:00+05:30</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://aamir-hussain-azad.vercel.app/assets/daily-ai-videos/2026-10-23_object-detection-work_poster.webp</video:thumbnail_loc>
+      <video:title>Object detection workflow</video:title>
+      <video:description>Aamir Hussain Azad on his work at Root Developers, Gurugram: object detection, image generation and crop yield models inside full-stack web apps.</video:description>
+      <video:content_loc>https://aamir-hussain-azad.vercel.app/assets/daily-ai-videos/2026-10-23_object-detection-work.mp4</video:content_loc>
+      <video:duration>17</video:duration>
+      <video:publication_date>2026-10-23T09:00:00+05:30</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://aamir-hussain-azad.vercel.app/assets/daily-ai-videos/2026-10-22_rest-api-structure_poster.webp</video:thumbnail_loc>
+      <video:title>REST API structure for MERN apps</video:title>
+      <video:description>MERN tip from Aamir Hussain Azad: split Express apps into routes, controllers and models, keep secrets in .env and validate input before MongoDB.</video:description>
+      <video:content_loc>https://aamir-hussain-azad.vercel.app/assets/daily-ai-videos/2026-10-22_rest-api-structure.mp4</video:content_loc>
+      <video:duration>17</video:duration>
+      <video:publication_date>2026-10-22T09:00:00+05:30</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://aamir-hussain-azad.vercel.app/assets/daily-ai-videos/2026-10-21_kmeans-rfm_poster.webp</video:thumbnail_loc>
+      <video:title>K-means RFM customer segmentation</video:title>
+      <video:description>Aamir Hussain Azad explains customer segmentation with Recency, Frequency, Monetary features and K-Means clustering.</video:description>
+      <video:content_loc>https://aamir-hussain-azad.vercel.app/assets/daily-ai-videos/2026-10-21_kmeans-rfm.mp4</video:content_loc>
+      <video:duration>17</video:duration>
+      <video:publication_date>2026-10-21T09:00:00+05:30</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://aamir-hussain-azad.vercel.app/assets/daily-ai-videos/2026-10-20_regression-metrics_poster.webp</video:thumbnail_loc>
+      <video:title>Regression model metrics: MAE, RMSE and R²</video:title>
+      <video:description>Machine learning refresher from Aamir Hussain Azad&#x27;s crop yield project: what MAE, RMSE and R² each tell you.</video:description>
+      <video:content_loc>https://aamir-hussain-azad.vercel.app/assets/daily-ai-videos/2026-10-20_regression-metrics.mp4</video:content_loc>
+      <video:duration>17</video:duration>
+      <video:publication_date>2026-10-20T09:00:00+05:30</video:publication_date>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://aamir-hussain-azad.vercel.app/assets/daily-ai-videos/2026-10-18_automate-data-cleaning_poster.webp</video:thumbnail_loc>
+      <video:title>Automated data cleaning in Python</video:title>
+      <video:description>Automation tip from Aamir Hussain Azad: write data-cleaning rules once in Python and log rejected rows so every KPI reconciles.</video:description>
+      <video:content_loc>https://aamir-hussain-azad.vercel.app/assets/daily-ai-videos/2026-10-18_automate-data-cleaning.mp4</video:content_loc>
+      <video:duration>17</video:duration>
+      <video:publication_date>2026-10-18T09:00:00+05:30</video:publication_date>
+    </video:video>
   </url>
   <url><loc>https://aamir-hussain-azad.vercel.app/profile/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://aamir-hussain-azad.vercel.app/resume/</loc><lastmod>2026-10-26</lastmod></url>
