@@ -1549,6 +1549,7 @@ html.lt .hero.pro-hero-v2{background:radial-gradient(ellipse at 74% 45%,rgba(34,
 @media(max-width:560px){.site-footer{padding:38px 20px 18px}.site-footer-main{grid-template-columns:1fr 1fr;gap:25px 18px}.site-footer-brand{grid-column:1/-1}.site-footer-bottom{align-items:flex-start;flex-direction:column;gap:8px}}
 @media(max-width:760px){body.workspace-focus #codehubBrowser>.wrap{width:calc(100% - 20px)!important}.workspace-pagebar{grid-template-columns:1fr auto;gap:12px;padding:18px}.workspace-pagecount{grid-column:1}.workspace-pager{grid-column:2;grid-row:1/3;flex-direction:column}.workspace-pagecopy p{font-size:13px}body.workspace-focus .browser-view .wrap{width:calc(100% - 28px)!important}}
 </style>
+<style>/* heavy sections stay hidden until the script mounts them into their tab views */main#home>section:is(#algorithmGalaxy,#roadmap,#tracks,#striverSheet,#notes,#atlas,#mlNotes,#aimlNotes,#logic,#practice,#projects,#whatsappAI,#contact){display:none}</style>
 </head><body>
 <header class="topbar pro-topbar">
   <div class="wrap nav pro-nav">
@@ -2526,7 +2527,7 @@ window.AIML_DATA=[["Foundations","AI vs ML vs DL vs Data Science","AI is the bro
   window.addEventListener('appinstalled',()=>{if(status){status.className='setup-status ok';status.textContent='CodeHub is installed on this device.'}});
 
   if('serviceWorker' in navigator && location.protocol==='https:'){
-    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+    navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>r.unregister())).catch(()=>{});
   }
 
   function routeQuery(q){

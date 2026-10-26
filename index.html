@@ -127,6 +127,14 @@
 if(t!=='light'&&t!=='dark'){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark';}
 document.documentElement.setAttribute('data-theme',t);})();
 </script>
+<script>
+/* show only the opened tab from the first paint, so phones never lay out the whole long page */
+(function(){var P={home:['.hero'],about:['#about'],skills:['#skills','.running-skills-section'],aiml:['#aiml'],experience:['#experience'],resume:['#resume'],
+codehub:['#codehub-launch'],projects:['#projects'],education:['#education','#interests'],contact:['#contact'],media:['#media']};
+var h=location.hash.slice(1),pg=(!h||h==='top')?'home':(h==='codehub-launch'?'codehub':(P[h]?h:null));if(!pg)return;
+var hide=[];for(var k in P){if(k!==pg)hide=hide.concat(P[k]);}
+var st=document.createElement('style');st.id='pre-route';st.textContent=hide.join(',')+'{display:none!important}';document.head.appendChild(st);})();
+</script>
 <style>
   :root{
     --ink:#0B1020;
@@ -215,8 +223,8 @@ document.documentElement.setAttribute('data-theme',t);})();
 
   /* scroll progress */
   #progress{
-    position:fixed; top:0; left:0; height:2px; width:0%;
-    background:var(--signal); z-index:100; transition:width .1s linear;
+    position:fixed; top:0; left:0; height:2px; width:100%;
+    background:var(--signal); z-index:100; transform:scaleX(0); transform-origin:0 50%; will-change:transform;
   }
 
   /* nav */
@@ -3399,6 +3407,14 @@ document.documentElement.setAttribute('data-theme',t);})();
   .about-story .about-flagship{margin:20px 0 4px;}
   .about-story > p + p{margin-top:2px;}
   @media (max-width:560px){ .about-facts{grid-template-columns:1fr;} .about-story{padding:22px 18px;} }
+  /* ===== smooth scrolling on phones/tablets: drop per-frame blur work ===== */
+  #grid-bg{will-change:transform;}
+  @media (max-width:820px), (hover:none){
+    header#top, .fab-wrap{backdrop-filter:none !important; -webkit-backdrop-filter:none !important;}
+    header#top{background:linear-gradient(100deg,rgb(7,12,36),rgb(22,20,80) 58%,rgb(58,24,96)) !important;}
+    .photo-bg{display:none;}
+    #grid-bg{transition:none;}
+  }
 </style>
 </head>
 <body>
@@ -5716,10 +5732,15 @@ document.documentElement.setAttribute('data-theme',t);})();
 
   // scroll progress
   var progress = document.getElementById('progress');
+  var progressTick = false;
   function updateProgress(){
-    var h = document.documentElement;
-    var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
-    progress.style.width = scrolled + '%';
+    if(progressTick) return;
+    progressTick = true;
+    requestAnimationFrame(function(){
+      progressTick = false;
+      var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+      progress.style.transform = 'scaleX(' + (max > 0 ? h.scrollTop / max : 0) + ')';
+    });
   }
   document.addEventListener('scroll', updateProgress, {passive:true});
   updateProgress();
@@ -6852,6 +6873,7 @@ document.documentElement.setAttribute('data-theme',t);})();
     window.addEventListener('hashchange',function(){ var id=location.hash.slice(1); var pg=pageOfId(id); if(pg && pg!==current) showPage(pg,null,true); });
     var start=location.hash?pageOfId(location.hash.slice(1)):null;
     showPage(start||'home',null,true);
+    var pre=document.getElementById('pre-route'); if(pre) pre.remove();
   })();
 
   // navbar dropdowns
