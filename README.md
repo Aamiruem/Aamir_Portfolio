@@ -30,7 +30,7 @@ Python · Machine Learning · Computer Vision · TensorFlow · scikit-learn · S
 
 ## Hosting (Vercel)
 
-Live at **https://aamir-hussain-azad.vercel.app/** — canonical tags, sitemap, robots.txt and structured data all use this URL.
+Live at **https://aamir-hussain-azad.vercel.app/** (short share link: **https://aamirazad.vercel.app** — redirects here) — canonical tags, sitemap, robots.txt and structured data all use this URL.
 
 - Vercel project: `aamir-hussain-azad` (static site, Framework Preset *Other*, no build step). `vercel.json` sets clean URLs, caching and security headers.
 - Every push to `main` deploys automatically once the GitHub repo is connected in Vercel → Project → Settings → Git.
