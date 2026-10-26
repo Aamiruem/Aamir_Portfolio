@@ -3417,6 +3417,20 @@ var st=document.createElement('style');st.id='pre-route';st.textContent=hide.joi
   }
   /* the open phone menu needs the full screen: hide the bottom call/WhatsApp bar */
   body.nav-menu-open .fab-wrap{display:none !important;}
+  /* orbit chips: fixed spokes on a ring that spins on the compositor (no per-frame JS) */
+  .hero-orbit-canvas .orbit-layer{will-change:transform; animation:orbitSpin var(--orbit-period,40s) linear infinite;}
+  .hero-orbit-canvas .orbit-layer.orbit-reverse{animation-direction:reverse;}
+  .hero-orbit-canvas .orbit-slot{position:absolute; top:50%; left:50%; width:0; height:0; transform:rotate(var(--a)) translateX(var(--r,200px)) rotate(calc(-1 * var(--a)));}
+  .hero-orbit-canvas .orbit-layer .orbit-chip{animation:orbitCounter var(--orbit-period,40s) linear infinite;}
+  .hero-orbit-canvas .orbit-layer.orbit-reverse .orbit-chip{animation-direction:reverse;}
+  @keyframes orbitSpin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+  @keyframes orbitCounter{from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(-360deg);}}
+  .orbit-paused .orbit-layer,.orbit-paused .orbit-chip,.orbit-paused .hero-profile-orbit{animation-play-state:paused !important;}
+  .orbit-static .orbit-layer,.orbit-static .orbit-chip{animation:none !important;}
+  @media (prefers-reduced-motion:reduce){ .hero-orbit-canvas .orbit-layer,.hero-orbit-canvas .orbit-chip{animation:none !important;} }
+  /* touch devices: no always-on decorative loops in the fixed header (SVG animations run on the main thread) */
+  @media (hover:none){ header::before,.brand-mark,.brand-mark::before,.brand-mark::after,.tn{animation:none !important;} }
+  @media (max-width:560px){ .hero-orbit-canvas .orbit-chip{padding:5px 8px !important; gap:5px !important;} .hero-orbit-canvas .orbit-chip b{font-size:11px !important;} .hero-orbit-canvas .orbit-chip .oc-ico{font-size:12px !important;} }
 </style>
 </head>
 <body>
@@ -5767,12 +5781,15 @@ var st=document.createElement('style');st.id='pre-route';st.textContent=hide.joi
     var m = roleMeta[i % roleMeta.length]; var b = document.getElementById('role-badge'); var ic = document.getElementById('role-ico');
     if(!b||!ic) return;
     b.style.setProperty('--rc', m[1]); ic.textContent = m[0];
-    document.documentElement.style.setProperty('--role-color', m[1]);
+    var card = document.querySelector('.hero-profile-card'); if(card) card.style.setProperty('--role-color', m[1]);
     b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop');
   }
   var typedEl = document.getElementById('typed');
-  var ri = 0, ci = 0, deleting = false;
+  var ri = 0, ci = 0, deleting = false, typedVisible = true;
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(en){ typedVisible = en[0].isIntersecting; }).observe(typedEl.parentNode); }
   function type(){
+    // idle-wait (no DOM work) while the badge is off screen, on another tab, or the page is in the background
+    if(document.hidden || !typedVisible){ setTimeout(type, 700); return; }
     var word = roles[ri];
     if(!deleting){
       ci++;
@@ -5806,15 +5823,17 @@ var st=document.createElement('style');st.id='pre-route';st.textContent=hide.joi
       span.style.setProperty('--chip-color', color);
       span.style.color = color;
       
-      el.appendChild(span);
-      orbitChips.push({
-        el: span,
-        radius: radius,
-        period: period,
-        dir: reverse ? -1 : 1,
-        offset: (360 / items.length) * i
-      });
+      var slot = document.createElement('span');
+      slot.className = 'orbit-slot';
+      slot.style.setProperty('--a', ((360 / items.length) * i) + 'deg');
+      slot.appendChild(span);
+      el.appendChild(slot);
     });
+    // the whole ring spins on the compositor; chips counter-spin to stay upright
+    el.style.setProperty('--orbit-period', (period / 1000) + 's');
+    el.dataset.radius = radius;
+    if(reverse) el.classList.add('orbit-reverse');
+    orbitChips.push(el);
   }
   buildOrbit('orbit-outer', outerItems, 234, 46000, false);
   buildOrbit('orbit-inner', innerItems, 152, 32000, true);
@@ -5833,27 +5852,21 @@ var st=document.createElement('style');st.id='pre-route';st.textContent=hide.joi
   updateOrbitScale();
   window.addEventListener('resize', updateOrbitScale);
 
-  function positionOrbit(ts){
-    orbitChips.forEach(function(c){
-      var angle = (c.offset + c.dir * (ts / c.period) * 360) * Math.PI / 180;
-      var r = c.radius * orbitScale;
-      var x = Math.cos(angle) * r;
-      var y = Math.sin(angle) * r;
-      c.el.style.transform = 'translate(-50%,-50%) translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)';
-    });
-    if(!reduced) requestAnimationFrame(positionOrbit);
+  function applyOrbitRadius(){
+    var k = window.innerWidth <= 560 ? 0.9 : 1;
+    orbitChips.forEach(function(layer){ layer.style.setProperty('--r', (Number(layer.dataset.radius) * orbitScale * k).toFixed(1) + 'px'); });
   }
-  if(reduced){
-    // static, evenly placed, no motion
-    orbitChips.forEach(function(c){
-      var angle = c.offset * Math.PI / 180;
-      var r = c.radius * orbitScale;
-      var x = Math.cos(angle) * r, y = Math.sin(angle) * r;
-      c.el.style.transform = 'translate(-50%,-50%) translate(' + x + 'px,' + y + 'px)';
-    });
-    document.querySelectorAll('.orbit-ring').forEach(function(n){ n.style.animation='none'; });
-  } else {
-    requestAnimationFrame(positionOrbit);
+  applyOrbitRadius();
+  window.addEventListener('resize', function(){ updateOrbitScale(); applyOrbitRadius(); });
+  var orbitCanvas = document.querySelector('.hero-orbit-canvas');
+  if(orbitCanvas){
+    if(reduced){
+      orbitCanvas.classList.add('orbit-static');
+      document.querySelectorAll('.orbit-ring').forEach(function(n){ n.style.animation='none'; });
+    } else if('IntersectionObserver' in window){
+      // stop spinning while the circle is off screen or its tab is hidden
+      new IntersectionObserver(function(en){ orbitCanvas.classList.toggle('orbit-paused', !en[0].isIntersecting); }).observe(orbitCanvas);
+    }
   }
 
   // two straight running-skills tracks below the crop-yield model
