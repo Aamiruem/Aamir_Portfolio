@@ -9,12 +9,12 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="description" content="Aamir Hussain Azad is an AI/ML Engineer at Root Developers, Gurugram and a full-stack developer (B.Tech CSE AI &amp; ML, UEM Jaipur). See his machine learning, RAG and data analytics projects, skills, resume and contact.">
-<meta name="keywords" content="Aamir Hussain Azad, Aamir Azad, Aamir Hussain, Aamir Hussain Azad portfolio, AI ML engineer, full-stack developer, machine learning portfolio, data analyst, Python, SQL, React, Node.js, RAG chatbot, crop yield prediction, UEM Jaipur, India">
+<meta name="keywords" content="Aamir Hussain Azad, Aamir Azad, Aamir Hussain, Aamir Hussain Azad portfolio, AI ML engineer, full-stack developer, machine learning portfolio, data analyst, Python, SQL, React, Node.js, RAG chatbot, crop yield prediction, UEM Jaipur, India, 9931879953, +91 99318 79953, Aamir Hussain Azad phone number">
 <meta name="author" content="Aamir Hussain Azad">
 <!-- Extra photos for the hero rotation and About photo strip: comma-separated paths, e.g. assets/photos/aamir-1.webp,assets/photos/aamir-2.webp -->
 <meta name="extra-photos" content="assets/photos/aamir-work-1.webp,assets/photos/aamir-work-4.webp,assets/photos/aamir-work-3.webp,assets/photos/aamir-work-5.webp">
 <!-- Google Search Console: paste your verification tag on the next line -->
-<!-- <meta name="google-site-verification" content="PASTE_CODE_HERE"> -->
+<!-- <meta name="google-site-verification" content="pJW7fuYYOiJNPryO78kb8SfbRcHPvSVrfqGpDBoktms"> -->
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="theme-color" content="#1D4ED8">
 <link rel="canonical" href="https://aamir-hussain-azad.vercel.app/">
@@ -7061,7 +7061,7 @@ var st=document.createElement('style');st.id='pre-route';st.textContent=hide.joi
     function addDot(i){ var b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Show photo '+(i+1)); b.onclick=function(){ show(i); restart(); }; dots.appendChild(b); }
     addDot(0); dots.hidden=true;
     // upright photos fill the portrait frame; wide ones are shown whole in the "At work" gallery
-    (function(go){ var idle=function(){ (window.requestIdleCallback||setTimeout)(go,1500); }; if(document.readyState==='complete') idle(); else addEventListener('load',idle); })(function(){ extraPhotos().forEach(function(src){ var pre=new Image(); pre.onload=function(){ if(pre.naturalWidth/pre.naturalHeight<=1.1){ slides.push(src); addDot(slides.length-1); dots.hidden=slides.length<2; restart(); } }; pre.src=src; }); });
+    (function(go){ var idle=function(){ if(window.requestIdleCallback){ requestIdleCallback(go,{timeout:1500}); } else { setTimeout(go,1500); } }; if(document.readyState==='complete') idle(); else addEventListener('load',idle); })(function(){ extraPhotos().forEach(function(src){ var pre=new Image(); pre.onload=function(){ if(pre.naturalWidth/pre.naturalHeight<=1.1){ slides.push(src); addDot(slides.length-1); dots.hidden=slides.length<2; restart(); } }; pre.src=src; }); });
     function show(k){
       cur=(k+slides.length)%slides.length; var src=slides[cur];
       var apply=function(){ frames.forEach(function(c){ card.classList.remove(c); }); card.classList.add(frames[cur%frames.length]); bg.style.backgroundImage='url("'+src+'")'; };
